@@ -1,0 +1,840 @@
+{
+	"info": {
+		"_postman_id": "95493890-da69-4a2d-97f2-4820f06755bd",
+		"name": "eventList",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21233877"
+	},
+	"item": [
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/categories",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/categories/63d13e09b49748a2dfaf3cda",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"categories",
+								"63d13e09b49748a2dfaf3cda"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\"  : \"Frontend\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/categories",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\"  : \"Fullstack\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/categories/63d1491520f890a7eb004dcd",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"categories",
+								"63d1491520f890a7eb004dcd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/categories/63d1491520f890a7eb004dcd",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"categories",
+								"63d1491520f890a7eb004dcd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Talents",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/talents?keyword=",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"talents"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/talents",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"talents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\"  : \"Asyam Dafa\",\r\n    \"role\"  : \"Backend\",\r\n    \"image\" : \"63d52d7dfb50c24428085635\"\r\n}"
+						},
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/talents",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"talents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\"  : \"Asyam Daffa Tsaqif\",\r\n    \"role\"  : \"FE\",\r\n    \"image\" : \"63d52c1ef8d34a3137213ec0\"\r\n}"
+						},
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/talents",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"talents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/talents/63d52d7dfb50c24428085635",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"talents",
+								"63d52d7dfb50c24428085635"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Images",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/C:/Users/sasya/Downloads/Logo EventList.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/images",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"images"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/C:/Users/sasya/Downloads/Logo EventList.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/images",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"images"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Events",
+			"item": [
+				{
+					"name": "Update Events",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\"  : \"Asyam Daffa Tsaqif\",\r\n    \"role\"  : \"FE\",\r\n    \"image\" : \"63d52c1ef8d34a3137213ec0\"\r\n}"
+						},
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/events",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Status Events",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\"  : \"Asyam Daffa Tsaqif\",\r\n    \"role\"  : \"FE\",\r\n    \"image\" : \"63d52c1ef8d34a3137213ec0\"\r\n}"
+						},
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/events",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Events",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"MERN Stack\",\r\n    \"date\"  : \"2023/01/31 08:16:14\",\r\n    \"about\" : \"MERN Stack adalah singkatan dari MongoDB, Express, React, dan Node.js, yang merupakan teknologi pembuatan aplikasi web yang populer. Workshop MERN Stack adalah acara pelatihan untuk mempelajari cara menggunakan teknologi ini untuk membuat aplikasi web.\",\r\n    \"venueName\" : \"Surakarta\",\r\n    \"tagline\"  : \"2023/01/31 08:16:14\",\r\n    \"keyPoint\" : \"MERN Stack\",\r\n    \"statusEvent\"  : \"2023/01/31 08:16:14\",\r\n    \"tickets\" : [\r\n        {   \r\n            \"type\"  : \"Presale 2 Ticket\",\r\n            \"price\" : \"10000\",\r\n            \"stock\" : \"290\",\r\n            \"statusTicketCategories\" : \"false\"\r\n        },\r\n        {\r\n            \"type\"  : \"Presale 1 Ticket\",\r\n            \"price\" : \"7000\",\r\n            \"stock\" : \"150\",\r\n            \"statusTicketCategories\" : \"true\"\r\n        }\r\n    ],\r\n    \"category\"  : \"63d7dcb250ca4b25bd2c75d0\"\r\n    \"talent\"    : \"\"\r\n    \"image\"     : \"63d7dc8a50ca4b25bd2c75cd\"\r\n}"
+						},
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/events",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/events",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"events"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "talent",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/events",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Events",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/events",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"events"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payments",
+			"item": [
+				{
+					"name": "Get All Payments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/events",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"events"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "talent",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Payments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/events",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Payments",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"MERN Stack\",\r\n    \"date\"  : \"2023/01/31 08:16:14\",\r\n    \"about\" : \"MERN Stack adalah singkatan dari MongoDB, Express, React, dan Node.js, yang merupakan teknologi pembuatan aplikasi web yang populer. Workshop MERN Stack adalah acara pelatihan untuk mempelajari cara menggunakan teknologi ini untuk membuat aplikasi web.\",\r\n    \"venueName\" : \"Surakarta\",\r\n    \"tagline\"  : \"2023/01/31 08:16:14\",\r\n    \"keyPoint\" : \"MERN Stack\",\r\n    \"statusEvent\"  : \"2023/01/31 08:16:14\",\r\n    \"tickets\" : [\r\n        {   \r\n            \"type\"  : \"Presale 2 Ticket\",\r\n            \"price\" : \"10000\",\r\n            \"stock\" : \"290\",\r\n            \"statusTicketCategories\" : \"false\"\r\n        },\r\n        {\r\n            \"type\"  : \"Presale 1 Ticket\",\r\n            \"price\" : \"7000\",\r\n            \"stock\" : \"150\",\r\n            \"statusTicketCategories\" : \"true\"\r\n        }\r\n    ],\r\n    \"category\"  : \"63d7dcb250ca4b25bd2c75d0\"\r\n    \"talent\"    : \"\"\r\n    \"image\"     : \"63d7dc8a50ca4b25bd2c75cd\"\r\n}"
+						},
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/events",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Payments",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\"  : \"Asyam Daffa Tsaqif\",\r\n    \"role\"  : \"FE\",\r\n    \"image\" : \"63d52c1ef8d34a3137213ec0\"\r\n}"
+						},
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/events",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Payments",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/events",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"events"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Get All Orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/orders?startDate&endDate&page=1&limit=5",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"orders"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": null
+								},
+								{
+									"key": "endDate",
+									"value": null
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CMS Auth",
+			"item": [
+				{
+					"name": "Signin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN_ADMIN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\"  : \"Organizer@gmail.com\",\r\n    \"password\"  : \"rahasia\",\r\n}"
+						},
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/SignIn",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"SignIn"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Organizers",
+			"item": [
+				{
+					"name": "Create Organizers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"organizer\"  : \"Organizer 1\",\r\n    \"name\"  : \"Organizer 1\",\r\n    \"email\"  : \"Organizer@gmail.com\",\r\n    \"password\"  : \"rahasia\",\r\n    \"confirmPassword\"  : \"rahasia\",\r\n    \"role\"  : \"organizer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/organizer",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"organizer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN_CMS_ORGANIZER}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"organizer\"  : \"Organizer 1\",\r\n    \"name\"  : \"Organizer 1\",\r\n    \"email\"  : \"Organizer@gmail.com\",\r\n    \"password\"  : \"rahasia\",\r\n    \"confirmPassword\"  : \"rahasia\",\r\n    \"role\"  : \"organizer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/users",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Organizers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/categories",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/categories/63d13e09b49748a2dfaf3cda",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"categories",
+								"63d13e09b49748a2dfaf3cda"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\"  : \"Fullstack\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/categories/63d1491520f890a7eb004dcd",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"categories",
+								"63d1491520f890a7eb004dcd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_DEV}}v1/cms/categories/63d1491520f890a7eb004dcd",
+							"host": [
+								"{{BASE_URL_DEV}}v1"
+							],
+							"path": [
+								"cms",
+								"categories",
+								"63d1491520f890a7eb004dcd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL_DEV",
+			"value": "http://localhost:9000/api/",
+			"type": "string"
+		},
+		{
+			"key": "BASE_URL_PRO",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "TOKEN_CMS_ORGANIZER",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
