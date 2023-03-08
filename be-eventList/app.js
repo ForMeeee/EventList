@@ -4,11 +4,10 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const cors = require("cors");
 const authCMSRouter = require("./app/api/v1/auth/router");
-
 const categoriesRouter = require("./app/api/v1/categories/router");
 const talentsRouter = require("./app/api/v1/talents/router");
 const imagesRouter = require("./app/api/v1/images/router");
-const eventsRouter = require('./app/api/v1/events/router');
+const eventsRouter = require("./app/api/v1/events/router");
 const organizersRouter = require("./app/api/v1/organizers/router");
 const userRefreshTokenRouter = require("./app/api/v1/userRefreshToken/router");
 const paymentsRouter = require("./app/api/v1/payments/router");
