@@ -5,10 +5,10 @@ import TextInput from "../TextInput";
 function TextInputWithLabel({
   label,
   name,
-  value,
+  value, // state
   type,
   onChange,
-  placeholder
+  placeholder,
 }) {
   return (
     <Form.Group className="mb-2">
