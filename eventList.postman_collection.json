@@ -12,6 +12,16 @@
 				{
 					"name": "get all",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN_CMS_ORGANIZER}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -620,7 +630,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "{{TOKEN_ADMIN}}",
+									"value": "{{TOKEN_CMS_ADMIN}}",
 									"type": "string"
 								}
 							]
@@ -629,16 +639,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\"  : \"Organizer@gmail.com\",\r\n    \"password\"  : \"rahasia\",\r\n}"
+							"raw": "{\r\n    \"email\"  : \"Organizer@gmail.com\",\r\n    \"password\"  : \"rahasia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{BASE_URL_DEV}}v1/cms/SignIn",
+							"raw": "{{BASE_URL_DEV}}v1/cms/auth/signin",
 							"host": [
 								"{{BASE_URL_DEV}}v1"
 							],
 							"path": [
 								"cms",
-								"SignIn"
+								"auth",
+								"signin"
 							]
 						}
 					},
@@ -656,7 +672,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"organizer\"  : \"Organizer 1\",\r\n    \"name\"  : \"Organizer 1\",\r\n    \"email\"  : \"Organizer@gmail.com\",\r\n    \"password\"  : \"rahasia\",\r\n    \"confirmPassword\"  : \"rahasia\",\r\n    \"role\"  : \"organizer\"\r\n}",
+							"raw": "{\r\n    \"organizer\"  : \"Organizer\",\r\n    \"name\"  : \"Organizer\",\r\n    \"email\"  : \"Organizer@gmail.com\",\r\n    \"password\"  : \"rahasia\",\r\n    \"confirmPassword\"  : \"rahasia\",\r\n    \"role\"  : \"organizer\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -664,13 +680,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{BASE_URL_DEV}}v1/cms/organizer",
+							"raw": "{{BASE_URL_DEV}}v1/cms/organizers",
 							"host": [
 								"{{BASE_URL_DEV}}v1"
 							],
 							"path": [
 								"cms",
-								"organizer"
+								"organizers"
 							]
 						}
 					},
@@ -833,6 +849,11 @@
 		},
 		{
 			"key": "TOKEN_CMS_ORGANIZER",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiT3JnYW5pemVyIiwidXNlcklkIjoiNjQwN2RlNjhlNTg4ZmQyYWVlNWRiMzM5Iiwicm9sZSI6Im9yZ2FuaXplciIsImVtYWlsIjoiT3JnYW5pemVyQGdtYWlsLmNvbSIsIm9yZ2FuaXplciI6IjY0MDdkZTY4ZTU4OGZkMmFlZTVkYjMzNyIsImlhdCI6MTY3ODIzNzMxMiwiZXhwIjoxNjc4MjQ0NTEyfQ.MtbqkZVpLnxFqsh5wOB2ijo5Z2gNCcVSTV1j3nOLnqc",
+			"type": "string"
+		},
+		{
+			"key": "TOKEN_CMS_ADMIN",
 			"value": "",
 			"type": "string"
 		}
