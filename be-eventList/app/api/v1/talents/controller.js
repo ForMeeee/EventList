@@ -1,7 +1,7 @@
 const {
   getAllTalents,
-  updateTalents,
   getOneTalents,
+  updateTalents,
   createTalents,
   deleteTalents,
 } = require("../../../services/mongoose/talents");

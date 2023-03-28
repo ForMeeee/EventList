@@ -1,4 +1,4 @@
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import { Container, Table, Spinner, Row, Col } from "react-bootstrap";
 import SBreadCrumb from "../../components/BreadCrumb";
 import SButton from "../../components/Button";
@@ -89,7 +89,7 @@ export default function EventsPage() {
           <SelectBox
             placeholder={"Masukan pencarian pembicara"}
             value={events.talent}
-            options={lists.Talents}
+            options={lists.talents}
             isClearable={true}
             handleChange={(value) => dispatch(setTalent(value))}
           />

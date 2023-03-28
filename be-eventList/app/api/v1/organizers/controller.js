@@ -40,7 +40,6 @@ const createCMSUser = async (req, res, next) => {
     next(err);
   }
 };
-
 module.exports = {
   createCMSOrganizer,
   getCMSUsers,

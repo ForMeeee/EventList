@@ -1,5 +1,5 @@
 const { ObjectId } = require("bson");
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const { model, Schema } = mongoose;
 
 let categorySchema = Schema(
@@ -16,6 +16,7 @@ let categorySchema = Schema(
       required: true,
     },
   },
+
   { timestamps: true }
 );
 

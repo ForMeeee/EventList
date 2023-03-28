@@ -31,7 +31,7 @@ const createTalents = async (req) => {
   await checkingImage(image);
 
   // cari talents dengan field name
-  const check = await Talents.findOne({ name, organizer: req.user.organizer});
+  const check = await Talents.findOne({ name, organizer: req.user.organizer });
 
   // apa bila check true / data talents sudah ada maka kita tampilkan error bad request dengan message pembicara duplikat
   if (check) throw new BadRequestError("pembicara nama duplikat");

@@ -1,4 +1,4 @@
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import { Container, Spinner, Table } from "react-bootstrap";
 import SBreadCrumb from "../../components/BreadCrumb";
 import SButton from "../../components/Button";
@@ -19,7 +19,7 @@ export default function CategoriesPage() {
   useEffect(() => {
     dispatch(fetchCategories());
   }, [dispatch]);
-  
+
   const handleDelete = async (id) => {
     Swal.fire({
       title: "Apa kamu yakin?",

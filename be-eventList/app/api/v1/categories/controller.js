@@ -1,30 +1,25 @@
-// import model category
 const {
   getAllCategories,
   getOneCategories,
-  updateCategories,
   createCategories,
+  updateCategories,
   deleteCategories,
 } = require("../../../services/mongoose/categories");
-
 const { StatusCodes } = require("http-status-codes");
 
-// buat function create
-const create = async (req, res) => {
+const create = async (req, res, next) => {
   try {
     const result = await createCategories(req);
 
-    // berikan response kepada client dengan mengembalikan product yang baru dibuat
     res.status(StatusCodes.CREATED).json({
       data: result,
     });
   } catch (err) {
-    // jika terjadi kesalahan kemudian gunakan method `next` agar Express memproses error tersebut
     next(err);
   }
 };
 
-const index = async (req, res) => {
+const index = async (req, res, next) => {
   try {
     const result = await getAllCategories(req);
     res.status(StatusCodes.OK).json({
@@ -35,7 +30,7 @@ const index = async (req, res) => {
   }
 };
 
-const find = async (req, res) => {
+const find = async (req, res, next) => {
   try {
     const result = await getOneCategories(req);
 
@@ -47,7 +42,7 @@ const find = async (req, res) => {
   }
 };
 
-const update = async (req, res) => {
+const update = async (req, res, next) => {
   try {
     const result = await updateCategories(req);
 
@@ -59,10 +54,9 @@ const update = async (req, res) => {
   }
 };
 
-const destroy = async (req, res) => {
+const destroy = async (req, res, next) => {
   try {
     const result = await deleteCategories(req);
-
     res.status(StatusCodes.OK).json({
       data: result,
     });
@@ -71,7 +65,6 @@ const destroy = async (req, res) => {
   }
 };
 
-// Export fungsi create pada controller categories
 module.exports = {
   create,
   index,

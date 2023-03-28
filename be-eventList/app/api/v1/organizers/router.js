@@ -19,5 +19,4 @@ router.post(
   createCMSUser
 );
 router.get("/users", getCMSUsers);
-
 module.exports = router;

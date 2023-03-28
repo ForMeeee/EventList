@@ -1,7 +1,7 @@
-import React from 'react';
-import { Form } from 'react-bootstrap';
-import SButton from '../../components/Button';
-import TextInputWithLabel from '../../components/TextInputWithLabel';
+import React from "react";
+import { Form } from "react-bootstrap";
+import SButton from "../../components/Button";
+import TextInputWithLabel from "../../components/TextInputWithLabel";
 
 function CategoriesFormPage({
   handleSubmit,
@@ -13,20 +13,20 @@ function CategoriesFormPage({
   return (
     <Form>
       <TextInputWithLabel
-        placeholder={'Masukan nama kategori'}
-        label={'Nama kategori'}
-        name='name'
+        placeholder={"Masukan nama kategori"}
+        label={"Nama kategori"}
+        name="name"
         value={form.name}
-        type='text'
+        type="text"
         onChange={handleChange}
       />
       <SButton
-        variant='primary'
+        variant="primary"
         action={handleSubmit}
         loading={isLoading}
         disabled={isLoading}
       >
-        {edit ? 'Ubah' : 'Simpan'}
+        {edit ? "Ubah" : "Simpan"}
       </SButton>
     </Form>
   );

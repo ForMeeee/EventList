@@ -13,7 +13,6 @@ export default function CategoriesCreatePage() {
     status: false,
     message: "",
   });
-
   const [isLoading, setIsLoading] = useState(false);
   const [form, setForm] = useState({
     name: "",
@@ -45,7 +44,7 @@ export default function CategoriesCreatePage() {
       setErrors({ ...errors, status: true, message: err.response.data.msg });
     }
   };
-      
+
   return (
     <Container>
       <SBreadCrumb

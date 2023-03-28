@@ -4,7 +4,7 @@ const Categories = require("../../api/v1/categories/model");
 // import custom error not found dan bad request
 const { NotFoundError, BadRequestError } = require("../../errors");
 
-const getAllCategories = async () => {
+const getAllCategories = async (req) => {
   let condition = { organizer: req.user.organizer };
 
   const result = await Categories.find(condition);
@@ -19,7 +19,7 @@ const createCategories = async (req) => {
   const check = await Categories.findOne({
     name,
     organizer: req.user.organizer,
-  });;
+  });
 
   // apa bila check true / data categories sudah ada maka kita tampilkan error bad request dengan message kategori nama duplikat
   if (check) throw new BadRequestError("kategori nama duplikat");
@@ -89,7 +89,7 @@ const deleteCategories = async (req) => {
 const checkingCategories = async (id) => {
   const result = await Categories.findOne({ _id: id });
 
-  if (!result) throw new NotFoundError(`Tidak ada Kategori dengan id :  ${id}`);
+  if (!result) throw new NotFoundError(`Tidak ada kategori dengan id :  ${id}`);
 
   return result;
 };

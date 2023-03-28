@@ -1,13 +1,12 @@
-// import services categories
 const {
   getAllEvents,
   getOneEvents,
   updateEvents,
   createEvents,
   deleteEvents,
-} = require("../../../services/mongoose/events");
+} = require('../../../services/mongoose/events');
 
-const { StatusCodes } = require("http-status-codes");
+const { StatusCodes } = require('http-status-codes');
 
 const create = async (req, res, next) => {
   try {
@@ -20,7 +19,6 @@ const create = async (req, res, next) => {
     next(err);
   }
 };
-
 const index = async (req, res, next) => {
   try {
     const result = await getAllEvents(req);
@@ -32,7 +30,6 @@ const index = async (req, res, next) => {
     next(err);
   }
 };
-
 const find = async (req, res, next) => {
   try {
     const result = await getOneEvents(req);
@@ -44,7 +41,6 @@ const find = async (req, res, next) => {
     next(err);
   }
 };
-
 const update = async (req, res, next) => {
   try {
     const result = await updateEvents(req);
@@ -56,7 +52,6 @@ const update = async (req, res, next) => {
     next(err);
   }
 };
-
 const destroy = async (req, res, next) => {
   try {
     const result = await deleteEvents(req);
@@ -69,10 +64,4 @@ const destroy = async (req, res, next) => {
   }
 };
 
-module.exports = {
-  index,
-  find,
-  update,
-  destroy,
-  create,
-};
+module.exports = { create, index, find, destroy, update };

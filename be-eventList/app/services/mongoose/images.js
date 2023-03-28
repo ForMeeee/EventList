@@ -11,7 +11,7 @@ const createImages = async (req) => {
   return result;
 };
 
-// tambahkan function checking Image 
+// tambahkan function checking Image
 const checkingImage = async (id) => {
   const result = await Images.findOne({ _id: id });
   console.log(result);

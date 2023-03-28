@@ -1,7 +1,6 @@
 const Events = require("../../api/v1/events/model");
-const Participant = require("../../api/v1/participants/model");
-const Payments = require("../../api/v1/payments/model");
 const { NotFoundError } = require("../../errors");
+const Participant = require("../../api/v1/participants/model");
 const { BadRequestError, UnauthorizedError } = require("../../errors");
 const { createJWT, createTokenParticipant } = require("../../utils");
 const { otpMail } = require("../mail");
@@ -114,19 +113,10 @@ const activateParticipant = async (req) => {
   return result;
 };
 
-const getAllPaymentByOrganizer = async (req) => {
-  const { organizer } = req.params;
-
-  const result = await Payments.find({ organizer: organizer });
-
-  return result;
-};
-
 module.exports = {
   getAllEvents,
   getOneEvent,
   signinParticipant,
   signupParticipant,
   activateParticipant,
-  getAllPaymentByOrganizer,
 };
