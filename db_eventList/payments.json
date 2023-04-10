@@ -1,0 +1,20 @@
+[{
+  "_id": {
+    "$oid": "64081dd039a47c8177702bcc"
+  },
+  "type": "Wallet",
+  "image": {
+    "$oid": "64081dcf39a47c8177702bc8"
+  },
+  "status": true,
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-03-08T05:32:00.348Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-28T05:24:06.357Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,56 @@
+[{
+  "_id": {
+    "$oid": "64081cab39a47c8177702b68"
+  },
+  "title": "ParadieFest 2023",
+  "date": {
+    "$date": "2023-03-08T05:22:00.000Z"
+  },
+  "about": "Paradicfest Merupakan Konser Musik Yang Diselenggarakan Oleh Ikamia Uin Malang. Mengundang Guest Star Ternama Yang Akan Diselenggarakan Di Graha Cakrawala Kota Malang.",
+  "tagline": "Konser UIN Malang",
+  "keyPoint": [
+    "Fest 2023",
+    "Musik"
+  ],
+  "venueName": "Malang",
+  "statusEvent": "Draft",
+  "tickets": [
+    {
+      "type": "FLASHSALE 1",
+      "price": 125,
+      "stock": 25,
+      "statusTicketCategories": true,
+      "_id": {
+        "$oid": "64081cab39a47c8177702b69"
+      }
+    },
+    {
+      "type": "PRESALE 1",
+      "price": 165,
+      "stock": 75,
+      "statusTicketCategories": true,
+      "_id": {
+        "$oid": "64081cab39a47c8177702b6a"
+      }
+    }
+  ],
+  "image": {
+    "$oid": "64081c3539a47c8177702b62"
+  },
+  "category": {
+    "$oid": "64081ae439a47c8177702b37"
+  },
+  "talent": {
+    "$oid": "64081b0f39a47c8177702b4b"
+  },
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-03-08T05:27:07.225Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-08T05:27:07.225Z"
+  },
+  "__v": 0
+}]

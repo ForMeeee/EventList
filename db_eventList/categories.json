@@ -1,0 +1,67 @@
+[{
+  "_id": {
+    "$oid": "63d13e09b49748a2dfaf3cda"
+  },
+  "name": "Backend",
+  "createdAt": {
+    "$date": "2023-01-25T14:34:49.276Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-25T14:34:49.276Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63d14a0b102818816070e2e2"
+  },
+  "name": "Frontend",
+  "createdAt": {
+    "$date": "2023-01-25T15:26:03.031Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-25T15:26:03.031Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63d7dcb250ca4b25bd2c75d0"
+  },
+  "name": "Valorant",
+  "createdAt": {
+    "$date": "2023-01-30T15:05:22.630Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-30T15:07:12.226Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64081ac339a47c8177702b2f"
+  },
+  "name": "Workshop",
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-03-08T05:18:59.827Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-08T05:18:59.827Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64081ae439a47c8177702b37"
+  },
+  "name": "Konser Musik",
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-03-08T05:19:32.674Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-08T05:19:46.634Z"
+  },
+  "__v": 0
+}]

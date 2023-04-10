@@ -1,0 +1,13 @@
+[{
+  "_id": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "organizer": "Organizer",
+  "createdAt": {
+    "$date": "2023-03-08T01:01:28.247Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-08T01:01:28.247Z"
+  },
+  "__v": 0
+}]

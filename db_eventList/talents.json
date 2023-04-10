@@ -1,0 +1,77 @@
+[{
+  "_id": {
+    "$oid": "64081d0b39a47c8177702b8a"
+  },
+  "name": "Soegi Bornean",
+  "role": "Talent",
+  "image": {
+    "$oid": "64081d0a39a47c8177702b86"
+  },
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-03-08T05:28:43.523Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-10T08:07:49.654Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64081d3739a47c8177702b9b"
+  },
+  "name": "Coldiac",
+  "role": "Talent",
+  "image": {
+    "$oid": "64081d3639a47c8177702b97"
+  },
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-03-08T05:29:27.508Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-08T05:29:27.508Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64081d4b39a47c8177702ba3"
+  },
+  "name": "Parade Hujan (Payung Teduh x Pusakata)",
+  "role": "Talent",
+  "image": {
+    "$oid": "64081d4b39a47c8177702b9f"
+  },
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-03-08T05:29:47.881Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-08T05:29:47.881Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64081d6739a47c8177702bab"
+  },
+  "name": "NIDJI",
+  "role": "Talent",
+  "image": {
+    "$oid": "64081d6139a47c8177702ba7"
+  },
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-03-08T05:30:15.093Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-08T05:30:15.093Z"
+  },
+  "__v": 0
+}]

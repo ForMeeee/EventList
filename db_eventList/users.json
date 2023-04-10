@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "6407de68e588fd2aee5db339"
+  },
+  "name": "Organizer",
+  "email": "Organizer@gmail.com",
+  "password": "$2a$12$j7vkOMiVHbwMW0x9CbO5/uWX0t.dS.QzirBOsXK6QBWQEETaVMXVS",
+  "role": "organizer",
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-03-08T01:01:28.277Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-08T01:01:28.277Z"
+  },
+  "__v": 0
+}]
