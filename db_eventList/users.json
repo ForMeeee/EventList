@@ -16,4 +16,22 @@
     "$date": "2023-03-08T01:01:28.277Z"
   },
   "__v": 0
+},{
+  "_id": {
+    "$oid": "6433d26736915bed15f4b114"
+  },
+  "name": "Admin 1",
+  "email": "Admin@gmail.com",
+  "password": "$2a$12$C7ziHwaVTFd2pwGuYR4I3.S81EejrwdRHZ.mkLMXg1LPHY/8HRmNy",
+  "role": "admin",
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-04-10T09:09:59.274Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-10T09:09:59.274Z"
+  },
+  "__v": 0
 }]

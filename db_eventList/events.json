@@ -4,7 +4,7 @@
   },
   "title": "ParadieFest 2023",
   "date": {
-    "$date": "2023-03-08T05:22:00.000Z"
+    "$date": "2023-04-10T05:00:00.000Z"
   },
   "about": "Paradicfest Merupakan Konser Musik Yang Diselenggarakan Oleh Ikamia Uin Malang. Mengundang Guest Star Ternama Yang Akan Diselenggarakan Di Graha Cakrawala Kota Malang.",
   "tagline": "Konser UIN Malang",
@@ -13,24 +13,24 @@
     "Musik"
   ],
   "venueName": "Malang",
-  "statusEvent": "Draft",
+  "statusEvent": "Published",
   "tickets": [
     {
-      "type": "FLASHSALE 1",
-      "price": 125,
-      "stock": 25,
+      "type": "Early Bird",
+      "price": 15000,
+      "stock": 1,
       "statusTicketCategories": true,
       "_id": {
-        "$oid": "64081cab39a47c8177702b69"
+        "$oid": "64361e306426deb63e661094"
       }
     },
     {
-      "type": "PRESALE 1",
-      "price": 165,
-      "stock": 75,
+      "type": "Presale 1",
+      "price": 25000,
+      "stock": 2,
       "statusTicketCategories": true,
       "_id": {
-        "$oid": "64081cab39a47c8177702b6a"
+        "$oid": "64361e306426deb63e661095"
       }
     }
   ],
@@ -41,7 +41,7 @@
     "$oid": "64081ae439a47c8177702b37"
   },
   "talent": {
-    "$oid": "64081b0f39a47c8177702b4b"
+    "$oid": "64081d0b39a47c8177702b8a"
   },
   "organizer": {
     "$oid": "6407de68e588fd2aee5db337"
@@ -50,7 +50,52 @@
     "$date": "2023-03-08T05:27:07.225Z"
   },
   "updatedAt": {
-    "$date": "2023-03-08T05:27:07.225Z"
+    "$date": "2023-04-12T02:57:52.809Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64358b4927a15a89e782be07"
+  },
+  "title": "Getting Started on Front End Development",
+  "date": {
+    "$date": "2023-04-11T16:29:00.000Z"
+  },
+  "about": "Hayy Everyone! ✨    Want to know more about front-end development and are interested in learning but don’t know where to start?     Here we are! ☺️  We have the workshop for you to introduce you to front end development   Let’s join “Getting Started on Front End Development” ",
+  "tagline": "Workshop",
+  "keyPoint": [
+    "Front End"
+  ],
+  "venueName": "Online Via Zoom ",
+  "statusEvent": "Published",
+  "tickets": [
+    {
+      "type": "Early Bird",
+      "price": 50000,
+      "stock": 2,
+      "statusTicketCategories": true,
+      "_id": {
+        "$oid": "64358b4927a15a89e782be08"
+      }
+    }
+  ],
+  "image": {
+    "$oid": "64358b2c27a15a89e782be01"
+  },
+  "category": {
+    "$oid": "64081ac339a47c8177702b2f"
+  },
+  "talent": {
+    "$oid": "6435890827a15a89e782bd5b"
+  },
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-04-11T16:31:05.239Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-11T16:31:05.239Z"
   },
   "__v": 0
 }]
