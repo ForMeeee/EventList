@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from "react";
 import { Container, Table, Image, Spinner } from "react-bootstrap";
 import SBreadCrumb from "../../components/BreadCrumb";
 import SButton from "../../components/Button";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import SearchInput from "../../components/SearchInput";
 import { deleteData } from "../../utils/fetch";
-import Swal from 'sweetalert2';
-import SAlert from '../../components/Alert';
+import Swal from "sweetalert2";
+import SAlert from "../../components/Alert";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchTalents, setKeyword } from "../../redux/talents/actions";
 import { setNotif } from "../../redux/notif/actions";
@@ -23,14 +23,14 @@ export default function TalentsPage() {
 
   const handleDelete = async (id) => {
     Swal.fire({
-      title: 'Apa kamu yakin?',
-      text: 'Anda tidak akan dapat mengembalikan ini!',
-      icon: 'warning',
+      title: "Apa kamu yakin?",
+      text: "Anda tidak akan dapat mengembalikan ini!",
+      icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Iya, Hapus',
-      cancelButtonText: 'Batal',
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Iya, Hapus",
+      cancelButtonText: "Batal",
     }).then(async (result) => {
       if (result.isConfirmed) {
         const res = await deleteData(`/v1/cms/talents/${id}`);

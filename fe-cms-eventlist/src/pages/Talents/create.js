@@ -67,7 +67,7 @@ function TalentsCreate() {
           ...alert,
           status: true,
           type: "danger",
-          message: "Type image png | jpg | jpeg",
+          message: "type image png | jpg | jpeg",
         });
         setForm({
           ...form,

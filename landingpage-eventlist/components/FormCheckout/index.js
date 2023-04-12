@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+// eslint-disable @next/next/no-img-element
 import React, { useState, useEffect } from "react";
 import Button from "../Button";
 import { useRouter } from "next/router";
@@ -40,7 +40,7 @@ export default function FormCheckout({ tickets }) {
     };
 
     fetctData();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {

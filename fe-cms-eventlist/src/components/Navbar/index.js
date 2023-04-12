@@ -10,22 +10,22 @@ import {
 import NavLink from "../NavAccess";
 
 export default function Header() {
-    const [role, setRole] = useState(null);
+  const [role, setRole] = useState(null);
 
-    console.log("role");
-    console.log(role);
+  console.log("role");
+  console.log(role);
 
-    useEffect(() => {
-      const fetchData = () => {
-        let { role } = localStorage.getItem("auth")
-          ? JSON.parse(localStorage.getItem("auth"))
-          : {};
+  useEffect(() => {
+    const fetchData = () => {
+      let { role } = localStorage.getItem("auth")
+        ? JSON.parse(localStorage.getItem("auth"))
+        : {};
 
-        setRole(role);
-      };
-      fetchData();
-    }, []);
-  
+      setRole(role);
+    };
+    fetchData();
+  }, []);
+
   const handleLogout = () => {
     localStorage.clear();
     window.location.href = "/signin";

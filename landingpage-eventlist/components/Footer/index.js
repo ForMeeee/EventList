@@ -15,29 +15,29 @@ export default function Footer() {
             dengan minat & terdekat.
           </p>
           <div className="d-flex flex-column footer-links">
-            <div className="title-links mb-3">Features</div>
-            <a href="#">Virtual</a>
-            <a href="#">Pricing</a>
+            <div className="title-links mb-3">Our Services</div>
+            <a href="#">Event Management</a>
+            <a href="#">Online Ticketing</a>
             <a href="#">Merchant</a>
             <a href="#">Tickets</a>
           </div>
           <div className="d-flex flex-column footer-links">
-            <div className="title-links mb-3">Company</div>
-            <a href="#">Jobs</a>
-            <a href="#">API</a>
+            <div className="title-links mb-3">Partner With Us</div>
+            <a href="#">Submit Event</a>
+            <a href="#">Official Partner</a>
             <a href="#">Press</a>
             <a href="#">Sitemap</a>
           </div>
           <div className="d-flex flex-column footer-links">
-            <div className="title-links mb-3">Learn</div>
+            <div className="title-links mb-3">Support</div>
             <a href="#">Guidebook</a>
-            <a href="#">Inspiration</a>
+            <a href="#">Contact Us</a>
             <a href="#">Community</a>
-            <a href="#">Tools</a>
+            <a href="#">Terms & Condition</a>
           </div>
         </div>
         <div className="d-flex justify-content-center paragraph all-rights">
-          All Rights Reserved. EventList 2023.
+          All Rights Reserved. EventList © 2023.
         </div>
       </div>
     </footer>

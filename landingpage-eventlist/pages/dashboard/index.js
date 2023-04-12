@@ -48,7 +48,7 @@ export default function Dashboard({ data }) {
                 </div>
               </div>
               <div className="total-price">
-                {data.totalPay === 0 ? "free" : `$${data.totalPay}`}
+                {data.totalPay === 0 ? "free" : `Rp${data.totalPay}`}
               </div>
             </div>
           ))}
