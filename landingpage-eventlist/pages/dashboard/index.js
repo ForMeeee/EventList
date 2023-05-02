@@ -23,7 +23,9 @@ export default function Dashboard({ data }) {
 
       <section className="bg-navy">
         <div className="checkout container">
-          <div className="text-center checkout-title">Invest In Yourself</div>
+          <div className="text-center checkout-title">
+            Ticket Purchase History
+          </div>
           {data.map((data) => (
             <div
               className="event-details container d-flex flex-wrap justify-content-lg-center align-items-center gap-5"

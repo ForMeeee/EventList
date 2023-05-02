@@ -46,7 +46,7 @@ export default function Navbar() {
             <NavLink href={"/"}>Home</NavLink>
             <NavLink href={"/#"}>Browse</NavLink>
             <NavLink href={"/#"}>Stories</NavLink>
-            <NavLink href={"/about"}>About</NavLink>
+            <NavLink href={"/#"}>About</NavLink>
           </div>
 
           {router.pathname !== "/signin" && (
