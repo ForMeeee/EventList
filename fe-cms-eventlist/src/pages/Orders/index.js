@@ -9,6 +9,7 @@ import { formatDate } from "../../utils/formatDate";
 import { fetchListEvents } from "../../redux/lists/actions";
 import moment from "moment";
 import Pagination from "../../components/Pagination";
+import { Link } from "react-router-dom";
 
 export default function OrdersPage() {
   const dispatch = useDispatch();
@@ -46,7 +47,7 @@ export default function OrdersPage() {
           className="cursor-pointer position-relative"
           onClick={() => setIsShowed(true)}
         >
-          <SearchInput disabled query={displayDate} />
+          <SearchInput query={displayDate} />
           {isShowed ? (
             <DateRange
               date={orders.date}
@@ -75,12 +76,15 @@ export default function OrdersPage() {
                 <th>Tanggal Event</th>
                 <th>Tanggal Order</th>
                 <th>Tempat</th>
+                <th>Total Tiket</th>
+                <th>Status Payment</th>
+                <th>Aksi</th>
               </tr>
             </thead>
             <tbody>
               {orders.status === "process" ? (
                 <tr>
-                  <td colSpan={6} style={{ textAlign: "center" }}>
+                  <td colSpan={9} style={{ textAlign: "center" }}>
                     <div className="flex items-center justify-center">
                       <Spinner animation="border" variant="primary" />
                     </div>
@@ -100,6 +104,9 @@ export default function OrdersPage() {
                     </td>
                     <td>{moment(data.date).format("DD-MM-YYYY")}</td>
                     <td>{data.historyEvent.venueName}</td>
+                    <td>{data.totalOrderTicket}</td>
+                    <td>{data.status}</td>
+                    <td><Link to={`/orders/${data._id}`} className="btn btn-success">Detail</Link></td>
                   </tr>
                 ))
               ) : (

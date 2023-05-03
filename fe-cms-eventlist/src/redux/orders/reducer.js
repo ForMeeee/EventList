@@ -4,6 +4,9 @@ import {
   ERROR_FETCHING_ORDERS,
   SET_PAGE,
   SET_DATE,
+  START_FETCHING_ORDER_DETAIL,
+  ERROR_FETCHING_ORDER_DETAIL,
+  SUCCESS_FETCHING_ORDER_DETAIL,
 } from "./constants";
 
 const statuslist = {
@@ -23,6 +26,7 @@ const initialState = {
     endDate: new Date(),
     key: "selection",
   },
+  id: '',
   status: statuslist.idle,
 };
 
@@ -40,6 +44,18 @@ export default function reducer(state = initialState, action) {
         status: statuslist.success,
         data: action.orders,
         pages: action.pages,
+      };
+    case START_FETCHING_ORDER_DETAIL:
+      return { ...state, status: statuslist.process };
+
+    case ERROR_FETCHING_ORDER_DETAIL:
+      return { ...state, status: statuslist.error };
+
+    case SUCCESS_FETCHING_ORDER_DETAIL:
+      return {
+        ...state,
+        status: statuslist.success,
+        data: action.detail,
       };
 
     case SET_PAGE:
