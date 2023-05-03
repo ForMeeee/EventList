@@ -44,9 +44,9 @@ export default function Navbar() {
             } my-3 my-lg-0`}
           >
             <NavLink href={"/"}>Home</NavLink>
-            <NavLink href={"/#"}>Browse</NavLink>
+            <NavLink href={"/browse"}>Browse</NavLink>
             <NavLink href={"/#"}>Stories</NavLink>
-            <NavLink href={"/#"}>About</NavLink>
+            <NavLink href={"/about"}>About</NavLink>
           </div>
 
           {router.pathname !== "/signin" && (

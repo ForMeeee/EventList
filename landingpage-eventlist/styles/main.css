@@ -376,12 +376,12 @@ footer .all-rights {
 }
 
 .details-content {
-  margin-top: -240px;
+  margin-top: -200px;
   padding-bottom: 70px;
 }
 .details-content .gap {
-  -moz-column-gap: 100px;
-       column-gap: 100px;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
   row-gap: 75px;
 }
 .details-content .description {
@@ -459,7 +459,7 @@ footer .all-rights {
   box-shadow: 0px 4px 15px rgba(19, 19, 29, 0.35);
 }
 .details-content .card-event {
-  padding: 24px;
+  /* padding: 24px; */
   background-color: #FFFFFF;
   border-radius: 24px;
   border: 1px solid #DFDFDF;
@@ -489,7 +489,7 @@ footer .all-rights {
 }
 .details-content .card-event .price {
   color: #151A26;
-  font-size: 42px;
+  font-size: 32px;
   font-weight: 700;
 }
 .details-content .card-event .price span {
@@ -504,6 +504,16 @@ footer .all-rights {
 .details-content .card-event .btn-green {
   margin-top: 14px;
   width: 302px;
+}
+
+.details-content .tickets {
+  background-color: #eee;
+}
+
+.details-content .tickets .type {
+  color: #4d4d4d;
+  font-size: .9rem;
+  margin-bottom: .3rem;
 }
 
 @media (max-width: 1200px) {

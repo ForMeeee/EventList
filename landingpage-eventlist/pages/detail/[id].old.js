@@ -9,117 +9,37 @@ import Stories from "../../components/Stories";
 import { useRouter } from "next/router";
 import { getData } from "../../utils/fetchData";
 import moment from "moment";
-import { formatDate, FormatMoney } from "../../utils/formatDate";
+import { formatDate } from "../../utils/formatDate";
 import Cookies from "js-cookie";
-import { Button, Card, Form, InputGroup } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 export default function DetailPage({ detailPage, id }) {
   const [data, setData] = useState([]);
-  const [cart, setCart] = useState([]);
-  const [ticketList, setTicketList] = useState([]);
-  const [totalOrder, setTotalOrder] = useState(0);
-
-
   useEffect(() => {
     const fetchData = async () => {
       try {
         const res = await getData("api/v1/events");
+
         setData(res.data);
       } catch (err) { }
     };
 
     fetchData();
-
-    let newList = [...detailPage.tickets];
-    newList.map((val, key) => {
-      newList[key].order = 0;
-    });
-    setTicketList(newList);
-
-    return () => {
-      newList = [];
-    }
-
+    console.log(detailPage)
   }, []);
 
   const router = useRouter();
 
-  const handleSubmit = async (ticketId, organizer) => {
+  const handleSubmit = (ticketId, organizer) => {
     const token = Cookies.get("token");
     if (!token) {
       return router.push("/signin");
     } else {
-      let orderData = [];
-      ticketList.map((val, key) => {
-        if (val.order > 0) {
-          orderData.push({
-            id: val._id,
-            type: val.type,
-            price: val.price,
-            order: val.order,
-          });
-        }
-      })
-
-      let data = {
-        organizer: detailPage.organizer,
-        dataOrder: orderData,
-      }
-      let dataString = JSON.stringify(data);
       router.push(
-        `/checkout/${id}?orderdata=${btoa(dataString)}`
+        `/checkout/${id}?ticketId=${ticketId}&organizer=${organizer}`
       );
     }
   };
-
-  const CalcuTotalOrder = async () => {
-    let total = 0;
-    for (let i = 0; i < ticketList.length; i++) {
-      let val = ticketList[i];
-      total += val.order * val.price;
-    }
-    setTotalOrder(total);
-  }
-
-  const handleAmountOrder = async (idx, add) => {
-    let newCart = [...ticketList];
-    let newTicket = newCart[idx];
-
-    if (add === 1) {
-      newTicket.order = (newTicket.order * 1) + 1;
-    } else {
-      newTicket.order = (newTicket.order * 1) - 1;
-    }
-
-    if (newTicket.order > 5) {
-      newTicket.order = 5;
-    } else if (newTicket.order <= 0) {
-      newTicket.order = 0;
-    }
-
-    newCart[idx] = newTicket;
-    setTicketList(newCart);
-    CalcuTotalOrder();
-  }
-
-  const handleChangeOrder = (idx) => (e) => {
-    let { name, value } = e.target;
-    let newCart = [...ticketList];
-    let newTicket = newCart[idx];
-
-    newTicket.order = value
-
-    if (newTicket.order > 5) {
-      newTicket.order = 5;
-    } else if (newTicket.order <= 0) {
-      newTicket.order = 0;
-    }
-
-    newCart[idx] = newTicket;
-    setTicketList(newCart);
-    CalcuTotalOrder();
-  }
-
   return (
     <>
       <Head>
@@ -206,40 +126,36 @@ export default function DetailPage({ detailPage, id }) {
             </div>
             <h6 className="p-4 border-top border-bottom">Ticket Category</h6>
             <div className="px-4 py-2 tickets">
-              {ticketList.map((ticket, key) => (
+              {detailPage.tickets.map((ticket) => (
                 <>
                   {ticket.statusTicketCategories ? (
                     <div key={ticket._id} className="card border m-2">
-                      <div className={`card-body border-start border-5 rounded-2 ` + (ticket.stock !== 0 ? `border-success` : `border-danger`)}>
-                        <div className="d-flex flex-row flex-wrap align-items-center">
-                          <div className="flex-grow-1">
+                      <div className={`card-body border-start border-5 rounded-2 ` + (detailPage.stock !== 0 ? `border-success` : `border-danger`)}>
+                        <div className="row">
+                          <div className="col col-12 col-lg-8">
                             <p className="type">{ticket.type}</p>
                             <div className="price">
-                              {ticket.price === 0 ? "free" : <>Rp<FormatMoney amount={ticket.price} /></>}
+                              {ticket.price === 0 ? "free" : `Rp${ticket.price}`}
                               <span>/person</span>
                             </div>
                           </div>
-                          <div className="" style={{maxWidth: '120px'}}>
+                          <div className="col col-12 col-lg-4 d-flex align-content-center flex-wrap">
+                            {detailPage.stock !== 0 ? <>
 
-                            {
-                              ticket.stock > 0 && <>
-                                {
-                                  ticket.order > 0
-                                    ? <>
-                                      <InputGroup>
-                                        <Button variant="secondary" onClick={() => handleAmountOrder(key, -1)}>-</Button>
-                                        <Form.Control name="orderamount" value={ticket.order} onChange={handleChangeOrder(key)} />
-                                        <Button variant="secondary" onClick={() => handleAmountOrder(key, +1)}>+</Button>
-                                      </InputGroup>
-                                    </>
-                                    : <Button variant="success" onClick={() => handleAmountOrder(key, +1)}>Add</Button>
+                              <Button
+                                variant={"success"}
+                                onClick={() =>
+                                  handleSubmit(ticket._id, detailPage.organizer)
                                 }
-                              </>
-                            }
-                            {
-                              ticket.stock <= 0 && <Button variant="secondary">Sold Out</Button>
-                            }
+                              >
+                                Join Now
+                              </Button>
 
+                            </> : <Button
+                              variant={"secondary"}
+                            >
+                              Sold Out
+                            </Button>}
                           </div>
                         </div>
                       </div>
@@ -250,15 +166,47 @@ export default function DetailPage({ detailPage, id }) {
                 </>
               ))}
             </div>
-            <div className="d-flex align-items-center px-5 py-3">
-              <div>
-                <h4>Subtotal</h4>
-                <h2 className="text-warning">Rp<FormatMoney amount={totalOrder} /></h2>
+
+
+            {/* {detailPage.tickets.map((ticket) => (
+              <div key={ticket._id}>
+                {ticket.statusTicketCategories ? (
+                  <>
+                    <div className="price my-3">
+                      {ticket.price === 0 ? "free" : `Rp${ticket.price}`}
+                      <span>/person</span>
+                    </div>
+                    <div className="d-flex gap-3 align-items-center card-details">
+                      <img src="/icons/ic-marker.svg" alt="EventList" />{" "}
+                      {detailPage.venueName}
+                    </div>
+                    <div className="d-flex gap-3 align-items-center card-details">
+                      <img src="/icons/ic-time.svg" alt="EventList" />{" "}
+                      {moment(detailPage.date).format("HH.MM A")}
+                    </div>
+                    <div className="d-flex gap-3 align-items-center card-details">
+                      <img src="/icons/ic-calendar.svg" alt="EventList" />{" "}
+                      {formatDate(detailPage.date)}
+                    </div>
+
+                    {detailPage.stock !== 0 && (
+                      <Button
+                        variant={"btn-green"}
+                        action={() =>
+                          handleSubmit(ticket._id, detailPage.organizer)
+                        }
+                      >
+                        Join Now
+                      </Button>
+                    )}
+                  </>
+                ) : (
+                  ""
+                )}
               </div>
-              <div className="ms-auto me-0">
-                <Button onClick={handleSubmit}>Checkout</Button>
-              </div>
-            </div>
+            ))} */}
+
+            <hr />
           </div>
         </div>
       </div>
@@ -273,7 +221,10 @@ export default function DetailPage({ detailPage, id }) {
 
 export async function getServerSideProps(context) {
   const req = await getData(`api/v1/events/${context.params.id}`);
+
   const res = req.data;
+  console.log(res);
+
   return {
     props: { detailPage: res, id: context.params.id },
   };

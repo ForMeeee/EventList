@@ -7,19 +7,10 @@ import Navbar from "../../components/Navbar";
 import { getData } from "../../utils/fetchData";
 import { formatDate } from "../../utils/formatDate";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
 
-export default function Checkout({ detailPage, participant }) {
+export default function Checkout({ detailPage }) {
   const router = useRouter();
-  const { ticketId, orderdata } = router.query;
-  const [orderData, setOrderData] = useState({})
-
-  useEffect(() => {
-    let data = atob(orderdata);
-    data = JSON.parse(data);
-    setOrderData(data);
-  }, [orderdata])
-
+  const { ticketId } = router.query;
   return (
     <>
       <Head>
@@ -72,7 +63,7 @@ export default function Checkout({ detailPage, participant }) {
           </div>
 
           {/* form */}
-          <FormCheckout tickets={detailPage.tickets} orderData={orderData} event={detailPage} participant={participant} />
+          <FormCheckout tickets={detailPage.tickets} />
         </div>
       </section>
       <Footer />
@@ -81,7 +72,7 @@ export default function Checkout({ detailPage, participant }) {
 }
 
 export async function getServerSideProps(context) {
-  const { token, user_id } = context.req.cookies;
+  const { token } = context.req.cookies;
 
   if (!token) {
     return {
@@ -95,6 +86,6 @@ export async function getServerSideProps(context) {
 
   const res = req.data;
   return {
-    props: { detailPage: res, participant: user_id },
+    props: { detailPage: res },
   };
 }

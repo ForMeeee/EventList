@@ -14,3 +14,60 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.about-page header, .browse-page header {
+  height: auto;
+}
+
+.about-us-welcome {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.about-us-welcome .welcome-text {
+  max-width: 800px;
+  width: 100%;
+}
+
+.about-us-welcome h1 {
+  font-size: 35pt;
+  margin-bottom: 30px;
+}
+
+.about-us-welcome span {
+  font-size: 21pt;
+}
+.about-page .image-group img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+}
+
+.about-us-welcome .welcome-text-2 span {
+  font-size: 14pt;
+}
+
+.about-us-welcome .welcome-text-2 h3 {
+  font-size: 32pt;
+}
+
+.browse-page .wrapper{
+  padding: 50px 0;
+  background-color: #ebebeb;
+}
+
+.browse-page .grow-today {
+  min-height: 100vh;
+  padding: 0;
+  background-color: transparent;
+}
+
+.card-grow {
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.card-content {
+  height: 150px;
+  padding: 10px;
+}
