@@ -30,7 +30,7 @@ const signin = async (req) => {
     user: result._id,
   });
 
-  return { token, role: result.role, email: result.email, refreshToken };
+  return { token, role: result.role, email: result.email, refreshToken, user_id: result._id };
 };
 
 module.exports = { signin };

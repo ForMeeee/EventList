@@ -1,7 +1,34 @@
 const mongoose = require("mongoose");
 
+const personalDetailSchema = new mongoose.Schema({
+  firstName: {
+    type: String,
+    required: [true, "Please provide firstName"],
+    minlength: 3,
+    maxlength: 50,
+  },
+  lastName: {
+    type: String,
+    required: [true, "Please provide lastName"],
+    minlength: 3,
+    maxlength: 50,
+  },
+  email: {
+    type: String,
+    required: [true, "Please provide email"],
+  },
+  role: {
+    type: String,
+    default: "Designer",
+  },
+})
+
 const orderDetailSchema = new mongoose.Schema({
   ticketCategories: {
+    _id: {
+      type: String,
+      required: [true, "Id tiket harus diisi"],
+    },
     type: {
       type: String,
       required: [true, "Tipe tiket harus diisi"],
@@ -11,6 +38,7 @@ const orderDetailSchema = new mongoose.Schema({
       default: 0,
     },
   },
+  userTickets: [personalDetailSchema],
   sumTicket: {
     type: Number,
     required: true,
@@ -23,28 +51,7 @@ const orderSchema = new mongoose.Schema(
       type: Date,
       required: true,
     },
-    personalDetail: {
-      firstName: {
-        type: String,
-        required: [true, "Please provide firstName"],
-        minlength: 3,
-        maxlength: 50,
-      },
-      lastName: {
-        type: String,
-        required: [true, "Please provide lastName"],
-        minlength: 3,
-        maxlength: 50,
-      },
-      email: {
-        type: String,
-        required: [true, "Please provide email"],
-      },
-      role: {
-        type: String,
-        default: "Designer",
-      },
-    },
+    personalDetail: personalDetailSchema,
     status: {
       type: String,
       enum: ["pending", "paid"],

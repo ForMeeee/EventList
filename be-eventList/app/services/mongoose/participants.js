@@ -2,6 +2,7 @@ const Events = require("../../api/v1/events/model");
 const Participant = require("../../api/v1/participants/model");
 const Payments = require("../../api/v1/payments/model");
 const Orders = require("../../api/v1/orders/model");
+const Categories = require("../../api/v1/categories/model");
 
 const { NotFoundError } = require("../../errors");
 const { BadRequestError, UnauthorizedError } = require("../../errors");
@@ -9,12 +10,36 @@ const { createJWT, createTokenParticipant } = require("../../utils");
 const { otpMail } = require("../mail");
 
 const getAllEvents = async (req) => {
-  const result = await Events.find({ statusEvent: "Published" })
+  const { category, priceFrom, priceTo } = req.query
+  let filter = { statusEvent: "Published" }
+  if (category) {
+    filter = {
+      ...filter,
+      category: category
+    }
+  }
+  if (priceFrom) {
+    filter = {
+      ...filter,
+      'tickets.price': {
+        $gte: priceFrom
+      }
+    }
+  }
+  if (priceTo) {
+    filter = {
+      ...filter,
+      'tickets.price': {
+        ...filter['tickets.price'],
+        $lte: priceTo
+      }
+    }
+  }
+  const query = await Events.find(filter)
     .populate("category")
     .populate("image")
     .select("_id title date tickets venueName");
-
-  return result;
+  return query;
 };
 
 const getOneEvent = async (req) => {
@@ -54,7 +79,7 @@ const signinParticipant = async (req) => {
 
   const token = createJWT({ payload: createTokenParticipant(result) });
 
-  return token;
+  return { token: token, user_id: result._id };
 };
 
 const signupParticipant = async (req) => {
@@ -119,7 +144,7 @@ const activateParticipant = async (req) => {
 const getAllPaymentByOrganizer = async (req) => {
   const { organizer } = req.params;
 
-  const result = await Payments.find({ organizer: organizer }).populate(
+  const result = await Payments.find().populate(
     "image"
   );
 
@@ -131,7 +156,7 @@ const getAllPaymentByOrganizer = async (req) => {
  * TODO: Ambil data email dari personal detail
  *  */
 const checkoutOrder = async (req) => {
-  const { event, personalDetail, payment, tickets } = req.body;
+  const { event, personalDetail, payment, tickets, participant } = req.body;
 
   const checkingEvent = await Events.findOne({ _id: event });
   if (!checkingEvent) {
@@ -185,7 +210,7 @@ const checkoutOrder = async (req) => {
     totalPay,
     totalOrderTicket,
     orderItems: tickets,
-    participant: req.participant.id,
+    participant: participant,
     event,
     historyEvent,
     payment,
@@ -198,7 +223,12 @@ const checkoutOrder = async (req) => {
 };
 
 const getAllOrders = async (req) => {
-  const result = await Orders.find({ participant: req.participant.id });
+  const result = await Orders.find({ participant: req.participant });
+  return result;
+};
+
+const getAllCategories = async (req) => {
+  const result = await Categories.find();
   return result;
 };
 
@@ -211,4 +241,5 @@ module.exports = {
   getAllPaymentByOrganizer,
   checkoutOrder,
   getAllOrders,
+  getAllCategories,
 };

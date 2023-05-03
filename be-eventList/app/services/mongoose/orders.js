@@ -1,3 +1,4 @@
+const { populate } = require("../../api/v1/orders/model");
 const Orders = require("../../api/v1/orders/model");
 
 const getAllOrders = async (req) => {
@@ -31,6 +32,29 @@ const getAllOrders = async (req) => {
   return { data: result, pages: Math.ceil(count / limit), total: count };
 };
 
+const getOneOrder = async (req) => {
+  const { id } = req.params;
+
+  const result = await Orders.findOne({
+    _id: id,
+  })
+    .populate("payment")
+    .populate({
+      path: "event",
+      populate:{
+        path: "image"
+      }
+    })
+  // .select("_id type status image");
+
+  if (!result)
+    throw new NotFoundError(`Tidak ada detail order dengan id :  ${id}`);
+
+  return result;
+};
+
+
 module.exports = {
   getAllOrders,
+  getOneOrder
 };
