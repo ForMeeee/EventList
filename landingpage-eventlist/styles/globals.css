@@ -15,7 +15,8 @@ a {
   box-sizing: border-box;
 }
 
-.about-page header, .browse-page header {
+.about-page header,
+.browse-page header {
   height: auto;
 }
 
@@ -51,7 +52,25 @@ a {
   font-size: 32pt;
 }
 
-.browse-page .wrapper{
+.col-lg-8 {
+  max-width: 720px;
+  text-align: center;
+  line-height: 28px;
+}
+
+.aboutUs-page_features {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  background: linear-gradient(
+    rgba(232, 252, 249, 0) 0%,
+    rgb(232, 252, 249) 35.94%
+  );
+}
+
+.browse-page .wrapper {
   padding: 50px 0;
   background-color: #ebebeb;
 }
@@ -62,12 +81,31 @@ a {
   background-color: transparent;
 }
 
-.card-grow {
-  border-radius: 10px;
-  background-color: #fff;
+.grow-today .gap {
+  row-gap: 24px;
 }
 
-.card-content {
+.card-grow {
+  border-radius: 20px;
+  background-color: #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+
+/* .card-content {
   height: 150px;
   padding: 10px;
+}  */
+
+.badge {
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
 }

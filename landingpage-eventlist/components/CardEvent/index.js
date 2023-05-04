@@ -2,7 +2,7 @@
 import React from "react";
 import CardTitle from "../CardTitle";
 import Link from "next/link";
-import { formatDate } from "../../utils/formatDate";
+import { formatDate, FormatMoney } from "../../utils/formatDate";
 
 export default function CardEvent({ data, title, subTitle }) {
   return (
@@ -16,7 +16,7 @@ export default function CardEvent({ data, title, subTitle }) {
                 <span className="badge-pricing">
                   {data.tickets[0].price === 0
                     ? "free"
-                    : `Rp${data.tickets[0].price}`}
+                    : <>Rp<FormatMoney amount={data.tickets[0].price} /></>}
                 </span>
                 <img
                   src={`${process.env.NEXT_PUBLIC_API}/${data.image.name}`}

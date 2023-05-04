@@ -38,7 +38,13 @@ export default function Checkout({ detailPage, participant }) {
 
           <div className="event-details container d-flex flex-wrap justify-content-lg-center align-items-center gap-5">
             <img
-              src="/images/details-image.png"
+              src={
+                detailPage.image?.name
+                  ? process.env.NEXT_PUBLIC_API_IMAGE +
+                    "/" +
+                    detailPage.image.name
+                  : "/images/details-image.png"
+              }
               className="event-image"
               alt="EventList"
             />

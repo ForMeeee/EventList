@@ -1,5 +1,5 @@
 import { Slider } from "@mui/material";
-import Navbar from "components/Navbar";
+import Navbar from "../components/Navbar";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Accordion, Badge, Button, Card, Col, Container, Form, FormGroup, FormLabel, Image, Row } from "react-bootstrap";
@@ -138,10 +138,10 @@ export default function Browse() {
                   }
                 </div>
                 <section className="grow-today">
-                  <div className="row">
+                  <div className="mt-1 row gap">
                     {data.map((data, index) => (
                       <div className="col-lg-4 col-md-6 col-12" key={index}>
-                        <div className="card-grow">
+                        <div className="card-grow h-100">
                           <span className="badge-pricing">
                             {data.tickets[0].price === 0
                               ? "free"
