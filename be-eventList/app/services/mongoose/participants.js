@@ -7,33 +7,41 @@ const Categories = require("../../api/v1/categories/model");
 const { NotFoundError } = require("../../errors");
 const { BadRequestError, UnauthorizedError } = require("../../errors");
 const { createJWT, createTokenParticipant } = require("../../utils");
-const { otpMail } = require("../mail");
+const { otpMail, invoiceMail } = require("../mail");
 
 const getAllEvents = async (req) => {
-  const { category, priceFrom, priceTo } = req.query
-  let filter = { statusEvent: "Published" }
+  const { category, priceFrom, priceTo, not } = req.query;
+  let filter = { statusEvent: "Published" };
   if (category) {
     filter = {
       ...filter,
-      category: category
-    }
+      category: category,
+    };
   }
   if (priceFrom) {
     filter = {
       ...filter,
-      'tickets.price': {
-        $gte: priceFrom
-      }
-    }
+      "tickets.price": {
+        $gte: priceFrom,
+      },
+    };
   }
   if (priceTo) {
     filter = {
       ...filter,
-      'tickets.price': {
-        ...filter['tickets.price'],
-        $lte: priceTo
-      }
-    }
+      "tickets.price": {
+        ...filter["tickets.price"],
+        $lte: priceTo,
+      },
+    };
+  }
+  if (not) {
+    filter = {
+      ...filter,
+      _id: {
+        $nin: not,
+      },
+    };
   }
   const query = await Events.find(filter)
     .populate("category")
@@ -44,10 +52,33 @@ const getAllEvents = async (req) => {
 
 const getOneEvent = async (req) => {
   const { id } = req.params;
-  const result = await Events.findOne({ _id: id })
-    .populate("category")
-    .populate({ path: "talent", populate: "image" })
-    .populate("image");
+  let result;
+  try {
+    // result = await Events.findOne({ _id: id })
+    //   .populate("category")
+    //   .populate("image")
+    //   .populate({
+    //     path: "talent",
+    //     select: "_id name role image",
+    //     populate: { path: "image", select: "_id  name" },
+    //   });
+
+    result = await Events.findOne({
+      _id: id,
+    })
+      .populate({ path: "image", select: "_id name" })
+      .populate({
+        path: "category",
+        select: "_id name",
+      })
+      .populate({
+        path: "talent",
+        select: "_id name role image",
+        populate: { path: "image", select: "_id  name" },
+      });
+  } catch ($e) {
+    console.log("error", $e);
+  }
 
   if (!result) throw new NotFoundError(`Tidak ada acara dengan id :  ${id}`);
 
@@ -78,8 +109,12 @@ const signinParticipant = async (req) => {
   }
 
   const token = createJWT({ payload: createTokenParticipant(result) });
-
-  return { token: token, user_id: result._id };
+  return {
+    token: token,
+    user_id: result._id,
+    firstName: result.firstName,
+    lastNam: result.lastName,
+  };
 };
 
 const signupParticipant = async (req) => {
@@ -144,9 +179,7 @@ const activateParticipant = async (req) => {
 const getAllPaymentByOrganizer = async (req) => {
   const { organizer } = req.params;
 
-  const result = await Payments.find().populate(
-    "image"
-  );
+  const result = await Payments.find().populate("image");
 
   return result;
 };
@@ -216,14 +249,27 @@ const checkoutOrder = async (req) => {
     payment,
   });
 
-  await result.save();
+  await result.save().then(async (saved) => {
+    //Coding send email
+    id = saved.id;
+    const data = await Orders.findOne({
+      _id: id,
+    })
+      .populate("payment")
+      .populate({
+        path: "event",
+        populate: {
+          path: "image",
+        },
+      });
+    await invoiceMail(data);
+  });
 
-  //Coding send email
   return result;
 };
 
 const getAllOrders = async (req) => {
-  const result = await Orders.find({ participant: req.participant });
+  const result = await Orders.find({ participant: req.participant.id });
   return result;
 };
 

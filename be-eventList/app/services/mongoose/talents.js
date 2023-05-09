@@ -120,6 +120,11 @@ const checkingTalents = async (id) => {
   return result;
 };
 
+const checkingMultiTalents = async (ids) => {
+  await ids.forEach((id) => {
+    return checkingTalents(id)
+  })
+}
 module.exports = {
   getAllTalents,
   createTalents,
@@ -127,4 +132,5 @@ module.exports = {
   updateTalents,
   deleteTalents,
   checkingTalents,
+  checkingMultiTalents,
 };

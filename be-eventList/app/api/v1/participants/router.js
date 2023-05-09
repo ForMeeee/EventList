@@ -24,5 +24,4 @@ router.get("/payments", authenticateParticipant, getAllPayment);
 router.post("/checkout", authenticateParticipant, checkout);
 router.get("/orders", authenticateParticipant, getAllDashboard);
 router.get("/eventcategories", eventcategories);
-
 module.exports = router;

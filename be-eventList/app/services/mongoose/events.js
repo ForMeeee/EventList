@@ -1,7 +1,7 @@
 const Events = require("../../api/v1/events/model");
 const { checkingImage } = require("./images");
 const { checkingCategories } = require("./categories");
-const { checkingTalents } = require("./talents");
+const { checkingTalents, checkingMultiTalents } = require("./talents");
 const { BadRequestError, NotFoundError } = require("../../errors");
 
 const createEvents = async (req) => {
@@ -121,7 +121,7 @@ const updateEvents = async (req) => {
   // cari image, category dan talent dengan field id
   await checkingImage(image);
   await checkingCategories(category);
-  await checkingTalents(talent);
+  await checkingMultiTalents(talent);
 
   // cari Events dengan field name dan id selain dari yang dikirim dari params
   const check = await Events.findOne({
