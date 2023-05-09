@@ -11,7 +11,7 @@ import { getData } from "../../utils/fetchData";
 import moment from "moment";
 import { formatDate, FormatMoney } from "../../utils/formatDate";
 import Cookies from "js-cookie";
-import { Button, Card, Form, InputGroup } from "react-bootstrap";
+import { Button, Card, Col, Form, InputGroup, Row } from "react-bootstrap";
 
 export default function DetailPage({ detailPage, id }) {
   const [data, setData] = useState([]);
@@ -19,13 +19,15 @@ export default function DetailPage({ detailPage, id }) {
   const [ticketList, setTicketList] = useState([]);
   const [totalOrder, setTotalOrder] = useState(0);
 
-
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await getData("api/v1/events");
+        const res = await getData("api/v1/events", {
+          category: detailPage.category._id,
+          not: detailPage._id,
+        });
         setData(res.data);
-      } catch (err) { }
+      } catch (err) {}
     };
 
     fetchData();
@@ -38,8 +40,7 @@ export default function DetailPage({ detailPage, id }) {
 
     return () => {
       newList = [];
-    }
-
+    };
   }, []);
 
   const router = useRouter();
@@ -59,16 +60,14 @@ export default function DetailPage({ detailPage, id }) {
             order: val.order,
           });
         }
-      })
+      });
 
       let data = {
         organizer: detailPage.organizer,
         dataOrder: orderData,
-      }
+      };
       let dataString = JSON.stringify(data);
-      router.push(
-        `/checkout/${id}?orderdata=${btoa(dataString)}`
-      );
+      router.push(`/checkout/${id}?orderdata=${btoa(dataString)}`);
     }
   };
 
@@ -79,16 +78,16 @@ export default function DetailPage({ detailPage, id }) {
       total += val.order * val.price;
     }
     setTotalOrder(total);
-  }
+  };
 
   const handleAmountOrder = async (idx, add) => {
     let newCart = [...ticketList];
     let newTicket = newCart[idx];
 
     if (add === 1) {
-      newTicket.order = (newTicket.order * 1) + 1;
+      newTicket.order = newTicket.order * 1 + 1;
     } else {
-      newTicket.order = (newTicket.order * 1) - 1;
+      newTicket.order = newTicket.order * 1 - 1;
     }
 
     if (newTicket.order > 5) {
@@ -100,14 +99,14 @@ export default function DetailPage({ detailPage, id }) {
     newCart[idx] = newTicket;
     setTicketList(newCart);
     CalcuTotalOrder();
-  }
+  };
 
   const handleChangeOrder = (idx) => (e) => {
     let { name, value } = e.target;
     let newCart = [...ticketList];
     let newTicket = newCart[idx];
 
-    newTicket.order = value
+    newTicket.order = value;
 
     if (newTicket.order > 5) {
       newTicket.order = 5;
@@ -118,7 +117,7 @@ export default function DetailPage({ detailPage, id }) {
     newCart[idx] = newTicket;
     setTicketList(newCart);
     CalcuTotalOrder();
-  }
+  };
 
   return (
     <>
@@ -144,173 +143,175 @@ export default function DetailPage({ detailPage, id }) {
         />
       </div>
       <div className="details-content container">
-        <div className="d-flex flex-wrap justify-content-lg-center gap">
-          <div className="d-flex flex-column description">
-            <div className="headline">{detailPage.title}</div>
+        <div className="d-flex flex-wrap justify-content-lg-center gap row">
+          <div className="col-12 col-lg-7">
+            <div className="d-flex flex-column description">
+              <div className="headline">{detailPage.title}</div>
 
-            <div className="d-flex align-items-center text-light">
-              <img src="/icons/ic-marker.svg" alt="EventList" />{" "}
-              {detailPage.venueName}
-            </div>
-            <div className="d-flex align-items-center text-light">
-              <img src="/icons/ic-time.svg" alt="EventList" />{" "}
-              {formatDate(detailPage.date)}{" "}
-              {moment(detailPage.date).format("HH.MM A")}
-            </div>
-            <br />
-            <div className="event-details">
-              <h6>Event Details</h6>
-              <p className="details-paragraph">{detailPage.about}</p>
-            </div>
-            <div className="keypoints">
-              {detailPage.keyPoint.map((key, i) => {
-                return (
-                  <div className="d-flex align-items-start gap-3" key={i}>
-                    <img src="/icons/ic-check.svg" alt="EventList" />
-                    <span>{key}</span>
-                  </div>
-                );
-              })}
-            </div>
-            <div className="map-location">
-              <h6>Event Location</h6>
-              <div className="map-placeholder">
-                <div className="maps">
-                  <img src="/images/maps.png" alt="" />
-                  <div
-                    className="absolute d-flex justify-content-center align-items-center"
-                    id="hoverMe"
-                  >
-                    <a href="#" className="btn-navy" id="btn-maps">
-                      View in Google Maps
-                    </a>
+              <div className="d-flex align-items-center text-light">
+                <img src="/icons/ic-marker.svg" alt="EventList" />{" "}
+                {detailPage.venueName}
+              </div>
+              <div className="d-flex align-items-center text-light">
+                <img src="/icons/ic-time.svg" alt="EventList" />{" "}
+                {formatDate(detailPage.date)}{" "}
+                {moment(detailPage.date).format("HH.MM A")}
+              </div>
+              <br />
+              <div className="event-details">
+                <h6>Event Details</h6>
+                <p className="details-paragraph">{detailPage.about}</p>
+              </div>
+              <div className="keypoints">
+                {detailPage.keyPoint.map((key, i) => {
+                  return (
+                    <div className="d-flex align-items-start gap-3" key={i}>
+                      <img src="/icons/ic-check.svg" alt="EventList" />
+                      <span>{key}</span>
+                    </div>
+                  );
+                })}
+              </div>
+              <div className="map-location">
+                <h6>Event Location</h6>
+                <div className="map-placeholder">
+                  <div className="maps">
+                    <img src="/images/maps.png" alt="" />
+                    <div
+                      className="absolute d-flex justify-content-center align-items-center"
+                      id="hoverMe"
+                    >
+                      <a href="#" className="btn-navy" id="btn-maps">
+                        View in Google Maps
+                      </a>
+                    </div>
                   </div>
                 </div>
+              </div>
+
+              <div className="my-3">
+                <h6>Your Speaker</h6>
+                <Row>
+                  {detailPage.talent.map((val, key) => {
+                    return (
+                      <Col xs="12" lg="6">
+                        <div className="d-flex align-items-center border p-2 mb-3">
+                          <div className="me-3">
+                            <img
+                              src={`${process.env.NEXT_PUBLIC_API}/${val.image?.name}`}
+                              alt="EventList"
+                              width="60"
+                            />
+                          </div>
+                          <div>
+                            <div className="speaker-name">{val.name}</div>
+                            <span className="occupation">{val.role}</span>
+                          </div>
+                        </div>
+                      </Col>
+                    );
+                  })}
+                </Row>
+                <div className="d-flex align-items-center gap-3 mt-3"></div>
               </div>
             </div>
           </div>
-
-          <div className="d-flex flex-column card-event">
-            <div className="p-4">
-              <h6>Your Speaker</h6>
-              <div className="d-flex align-items-center gap-3 mt-3">
-                <img
-                  src={`${process.env.NEXT_PUBLIC_API}/${detailPage?.talent?.image?.name}`}
-                  alt="EventList"
-                  width="60"
-                />
-                <div>
-                  <div className="speaker-name">{detailPage?.talent?.name}</div>
-                  <span className="occupation">{detailPage?.talent?.role}</span>
-                </div>
-              </div>
-            </div>
-            <h6 className="p-4 border-top border-bottom">Ticket Category</h6>
-            <div className="px-4 py-2 tickets">
-              {ticketList.map((ticket, key) => (
-                <>
-                  {ticket.statusTicketCategories ? (
-                    <div key={ticket._id} className="card border m-2">
-                      <div
-                        className={
-                          `card-body border-start border-5 rounded-2 ` +
-                          (ticket.stock !== 0
-                            ? `border-success`
-                            : `border-danger`)
-                        }
-                      >
-                        <div className="d-flex flex-row flex-wrap align-items-center">
-                          <div className="flex-grow-1">
-                            <p className="type">{ticket.type}</p>
-                            <div className="price">
-                              {ticket.price === 0 ? (
-                                "free"
-                              ) : (
+          <div className="col-12 col-lg-4">
+            <div className="d-flex flex-column card-event">
+              <h6 className="p-4">Ticket Category</h6>
+              <div className="px-4 py-2 tickets">
+                {ticketList.map((ticket, key) => (
+                  <>
+                    {ticket.statusTicketCategories ? (
+                      <div key={ticket._id} className="card border m-2">
+                        <div
+                          className={
+                            `card-body border-start border-5 rounded-2 ` +
+                            (ticket.stock !== 0
+                              ? `border-success`
+                              : `border-danger`)
+                          }
+                        >
+                          <div className="d-flex flex-row flex-wrap align-items-center">
+                            <div className="flex-grow-1">
+                              <p className="type">{ticket.type}</p>
+                              <div className="price">
+                                {ticket.price === 0 ? (
+                                  "free"
+                                ) : (
+                                  <>
+                                    Rp
+                                    <FormatMoney amount={ticket.price} />
+                                  </>
+                                )}
+                                <span>/person</span>
+                              </div>
+                            </div>
+                            <div className="" style={{ maxWidth: "120px" }}>
+                              {ticket.stock > 0 && (
                                 <>
-                                  Rp
-                                  <FormatMoney amount={ticket.price} />
+                                  {ticket.order > 0 ? (
+                                    <>
+                                      <InputGroup>
+                                        <Button
+                                          variant="secondary"
+                                          onClick={() =>
+                                            handleAmountOrder(key, -1)
+                                          }
+                                        >
+                                          -
+                                        </Button>
+                                        <Form.Control
+                                          name="orderamount"
+                                          value={ticket.order}
+                                          onChange={handleChangeOrder(key)}
+                                        />
+                                        <Button
+                                          variant="secondary"
+                                          onClick={() =>
+                                            handleAmountOrder(key, +1)
+                                          }
+                                        >
+                                          +
+                                        </Button>
+                                      </InputGroup>
+                                    </>
+                                  ) : (
+                                    <Button
+                                      variant="success"
+                                      onClick={() => handleAmountOrder(key, +1)}
+                                    >
+                                      Add
+                                    </Button>
+                                  )}
                                 </>
                               )}
-                              <span>/person</span>
+                              {ticket.stock <= 0 && (
+                                <Button variant="secondary">Sold Out</Button>
+                              )}
                             </div>
-                          </div>
-                          <div
-                            className="ms-auto me-0"
-                            style={{ maxWidth: "105px" }}
-                          >
-                            {ticket.stock > 0 && (
-                              <>
-                                {ticket.order > 0 ? (
-                                  <>
-                                    <InputGroup>
-                                      <Button
-                                        variant="secondary"
-                                        onClick={() =>
-                                          handleAmountOrder(key, -1)
-                                        }
-                                      >
-                                        -
-                                      </Button>
-                                      <Form.Control
-                                        name="orderamount"
-                                        value={ticket.order}
-                                        onChange={handleChangeOrder(key)}
-                                      />
-                                      <Button
-                                        variant="secondary"
-                                        onClick={() =>
-                                          handleAmountOrder(key, +1)
-                                        }
-                                      >
-                                        +
-                                      </Button>
-                                    </InputGroup>
-                                  </>
-                                ) : (
-                                  <Button
-                                    variant="success"
-                                    onClick={() => handleAmountOrder(key, +1)}
-                                    style={{
-                                      padding: "5px 10px",
-                                      width: "100px",
-                                      height: "40px",
-                                      marginLeft: "0.5rem",
-                                    }}
-                                  >
-                                    Add
-                                  </Button>
-                                )}
-                              </>
-                            )}
-                            {ticket.stock <= 0 && (
-                              <Button variant="secondary">Sold Out</Button>
-                            )}
                           </div>
                         </div>
                       </div>
-                    </div>
-                  ) : (
-                    ""
-                  )}
-                </>
-              ))}
-            </div>
-            <div className="d-flex align-items-center px-5 py-3">
-              <div>
-                <h4 style={{ fontSize: "14px" }}>Subtotal</h4>
-                <h2 className="text-warning" style={{ fontSize: "20px" }}>
-                  {" "}
-                  Rp
-                  <FormatMoney amount={totalOrder} />
-                </h2>
+                    ) : (
+                      ""
+                    )}
+                  </>
+                ))}
               </div>
-              <div className="ms-auto me-0">
-                <Button
-                  onClick={handleSubmit}
-                  style={{ fontSize: "16px", padding: "10px" }}
-                >
-                  Checkout
-                </Button>
+              <div className="d-flex align-items-center px-4 py-3">
+                <div>
+                  <p className="h5">Subtotal</p>
+                  <p className="h4 text-warning">
+                    Rp
+                    <FormatMoney amount={totalOrder} />
+                  </p>
+                </div>
+                <div className="ms-auto me-0">
+                  <Button onClick={handleSubmit} disabled={totalOrder <= 0}>
+                    Checkout
+                  </Button>
+                </div>
               </div>
             </div>
           </div>

@@ -5,7 +5,7 @@ import Footer from "../../components/Footer";
 import FormCheckout from "../../components/FormCheckout";
 import Navbar from "../../components/Navbar";
 import { getData } from "../../utils/fetchData";
-import { formatDate } from "../../utils/formatDate";
+import { formatDate, FormatMoney } from "../../utils/formatDate";
 import { useEffect } from "react";
 
 export default function Dashboard({ data }) {
@@ -50,7 +50,8 @@ export default function Dashboard({ data }) {
                 </div>
               </div>
               <div className="total-price">
-                {data.totalPay === 0 ? "free" : `Rp${data.totalPay}`}
+                {/* {data.totalPay === 0 ? "free" : `Rp${data.totalPay}`} */}
+                {data.totalPay === 0 ? "free" : <>Rp<FormatMoney amount={data.totalPay} /></>}
               </div>
             </div>
           ))}

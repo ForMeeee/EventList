@@ -109,15 +109,15 @@ export default function Browse() {
                       <Accordion.Item eventKey="1">
                         <Accordion.Header>Rentang Harga</Accordion.Header>
                         <Accordion.Body>
-                          <Slider value={range} onChange={handleChangeRange} min={0} max={2500001} />
+                          <Slider value={range} onChange={handleChangeRange} min={0} max={1500001} />
                           <div className="d-flex flex-row">
                             <div><small>IDR {
-                              (range[0]) > 2500000 ? <><FormatMoney amount={2500000} />+</>
+                              (range[0]) > 1500000 ? <><FormatMoney amount={1500000} />+</>
                                 : <FormatMoney amount={range[0]} />
                             }</small></div>
                             <div className="me-0 ms-auto">
                               <div><small>IDR {
-                                (range[1]) > 2500000 ? <><FormatMoney amount={2500000} />+</>
+                                (range[1]) > 1500000 ? <><FormatMoney amount={1500000} />+</>
                                   : <FormatMoney amount={range[1]} />
                               }</small></div>
                             </div>

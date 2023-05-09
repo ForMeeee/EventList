@@ -299,10 +299,9 @@ export default function FormCheckout({ tickets, orderData, event, participant })
             <div>Ticket User</div>
           </div>
         </div>
-        {
-          order.map((val, key) => {
-            return <>
-
+        {order.map((val, key) => {
+          return (
+            <>
               <div className="row row-cols-lg-8 row-cols-md-2 row-cols-1 justify-content-center">
                 <div className="mb-1 col-lg-1">
                   <button className="btn btn-secondary">{key + 1}</button>
@@ -361,7 +360,10 @@ export default function FormCheckout({ tickets, orderData, event, participant })
                 </div>
 
                 <div className="mb-4 col-lg-3">
-                  <label htmlFor="exampleFormControlInput1" className="form-label">
+                  <label
+                    htmlFor="exampleFormControlInput1"
+                    className="form-label"
+                  >
                     Role
                   </label>
                   <input
@@ -376,10 +378,8 @@ export default function FormCheckout({ tickets, orderData, event, participant })
                 </div>
               </div>
             </>
-          })
-        }
-
-
+          );
+        })}
       </div>
 
       <div className="payment-method mt-4">
@@ -414,7 +414,7 @@ export default function FormCheckout({ tickets, orderData, event, participant })
           ))}
         </div>
       </div>
-      <div>
+      <div className="payment-detail mt-4">
         <div className="row row-cols-lg-8 row-cols-md-2 row-cols-1 justify-content-lg-center">
           <div className="form-title col-lg-8">
             <span>04</span>
@@ -430,10 +430,12 @@ export default function FormCheckout({ tickets, orderData, event, participant })
           <div className="mb-4 col-lg-6">
             <InputGroup>
               <InputGroup.Text>Rp</InputGroup.Text>
-              <Form.Control  value={FormatMoney({amount: form.ticketTotal})} readOnly />
+              <Form.Control
+                value={FormatMoney({ amount: form.ticketTotal })}
+                readOnly
+              />
             </InputGroup>
           </div>
-
         </div>
       </div>
 

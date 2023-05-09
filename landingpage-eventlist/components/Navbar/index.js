@@ -8,9 +8,11 @@ import Cookies from "js-cookie";
 export default function Navbar() {
   const router = useRouter();
   const [token, setToken] = useState("");
+  const [firstName, setFirstName] = useState("");
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
+    setFirstName(Cookies.get("firstName"));
     return setToken(Cookies.get("token"));
   });
 
@@ -55,7 +57,7 @@ export default function Navbar() {
                 <div className="navbar-nav ms-auto">
                   <div className="nav-item dropdown d-flex flex-column flex-lg-row align-items-lg-center authenticated gap-3">
                     <span className="text-light d-none d-lg-block">
-                      Hello, Syamm!
+                      Hello, {firstName}!
                     </span>
 
                     <a

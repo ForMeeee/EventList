@@ -32,6 +32,8 @@ export default function FormSignin() {
       });
       Cookies.set("token", res.data.token);
       Cookies.set("user_id", res.data.user_id);
+      Cookies.set("firstName", res.data.firstName);
+      Cookies.set("lastName", res.data.lastName);
       router.push("/");
     } catch (err) {
       toast.error(err?.response?.data?.msg || "Internal server error", {
