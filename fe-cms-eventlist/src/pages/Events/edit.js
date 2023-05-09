@@ -13,6 +13,7 @@ function EventsEdit() {
   const { id } = useParams();
   const [listTalents, setListTalents] = useState([]);
   const [listCategories, setListCategories] = useState([]);
+  const [selectedSpeakers, setSelectedSpeakers] = useState([]);
 
   const [form, setForm] = useState({
     title: "",
@@ -32,7 +33,7 @@ function EventsEdit() {
       },
     ],
     category: "",
-    talent: "",
+    talent: [],
   });
 
   const [alert, setAlert] = useState({
@@ -48,7 +49,7 @@ function EventsEdit() {
 
     const _temp = [];
 
-    res.data.data.tickets.forEach((tic) => {
+    await res.data.data.tickets.forEach((tic) => {
       _temp.push({
         type: tic.type,
         price: tic.price,
@@ -59,6 +60,23 @@ function EventsEdit() {
         },
       });
     });
+
+    let _tempTalent = [];
+    await res.data.data.talent.forEach((tlt) => {
+      _tempTalent.push({
+        value: tlt._id,
+        label: tlt.name,
+      });
+    });
+
+    let _tempCat = {
+      label: res.data.data.category.name,
+      value: res.data.data.category._id,
+    };
+    let _tempStatusEvt = {
+      label: res.data.data.statusEvent,
+      value: res.data.data.statusEvent,
+    };
 
     setForm({
       ...form,
@@ -71,20 +89,15 @@ function EventsEdit() {
       tagline: res.data.data.tagline,
       keyPoint: res.data.data.keyPoint,
       tickets: _temp,
-      category: {
-        label: res.data.data.category.name,
-        value: res.data.data.category._id,
-      },
-      talent: {
-        label: res.data.data.talent.name,
-        value: res.data.data.talent._id,
-      },
+      category: _tempCat,
+      talent: _tempTalent,
+      statusEvent: _tempStatusEvt,
     });
   };
 
   useEffect(() => {
     getAPISingleEvents(id);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getAPIListCategories = async () => {
@@ -176,7 +189,10 @@ function EventsEdit() {
           [e.target.name]: "",
         });
       }
-    } else if (e.target.name === "category" || e.target.name === "talent") {
+    } else if (
+      e.target.name === "category" ||
+      e.target.name === "statusEvent"
+    ) {
       setForm({ ...form, [e.target.name]: e });
     } else {
       setForm({ ...form, [e.target.name]: e.target.value });
@@ -188,13 +204,18 @@ function EventsEdit() {
       setIsLoading(true);
 
       const _temp = [];
-      form.tickets.forEach((tic) => {
+      await form.tickets.forEach((tic) => {
         _temp.push({
           type: tic.type,
           statusTicketCategories: tic.statusTicketCategories.value,
           stock: tic.stock,
           price: tic.price,
         });
+      });
+
+      const _temp_talent = [];
+      await form.talent.forEach((tic) => {
+        _temp_talent.push(tic.value);
       });
 
       const payload = {
@@ -207,9 +228,10 @@ function EventsEdit() {
         tagline: form.tagline,
         keyPoint: form.keyPoint,
         category: form.category.value,
-        talent: form.talent.value,
         status: form.status,
         tickets: _temp,
+        talent: _temp_talent,
+        statusEvent: form.statusEvent.value,
       };
 
       const res = await putData(`/v1/cms/events/${id}`, payload);
@@ -291,6 +313,16 @@ function EventsEdit() {
     setForm({ ...form, tickets: _temp });
   };
 
+  const handleChangeSpeaker = async (e) => {
+    let _temp = [];
+
+    await e.forEach((target) => {
+      _temp.push(target);
+    });
+
+    setForm({ ...form, talent: _temp });
+  };
+
   return (
     <Container>
       <BreadCrumb
@@ -313,6 +345,7 @@ function EventsEdit() {
         handleMinusTicket={handleMinusTicket}
         handleChangeTicket={handleChangeTicket}
         edit
+        handleChangeSpeaker={handleChangeSpeaker}
       />
     </Container>
   );

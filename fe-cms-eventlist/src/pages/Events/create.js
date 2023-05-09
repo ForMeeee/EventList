@@ -11,6 +11,7 @@ function EventsCreate() {
   const navigate = useNavigate();
   const [listTalents, setListTalents] = useState([]);
   const [listCategories, setListCategories] = useState([]);
+  const [selectedSpeakers, setSelectedSpeakers] = useState([]);
 
   const [form, setForm] = useState({
     title: "",
@@ -31,7 +32,7 @@ function EventsCreate() {
       },
     ],
     category: "",
-    talent: "",
+    talent: [],
   });
 
   console.log("form.keyPoint");
@@ -134,7 +135,11 @@ function EventsCreate() {
           [e.target.name]: "",
         });
       }
-    } else if (e.target.name === "category" || e.target.name === "talent") {
+      // } else if (e.target.name === "category" || e.target.name === "talent") {
+    } else if (
+      e.target.name === "category" ||
+      e.target.name === "statusEvent"
+    ) {
       setForm({ ...form, [e.target.name]: e });
     } else {
       setForm({ ...form, [e.target.name]: e.target.value });
@@ -155,6 +160,11 @@ function EventsCreate() {
         });
       });
 
+      const _temp_talent = [];
+      await form.talent.forEach((tic) => {
+        _temp_talent.push(tic.value);
+      });
+
       const payload = {
         date: form.date,
         image: form.file,
@@ -165,9 +175,10 @@ function EventsCreate() {
         tagline: form.tagline,
         keyPoint: form.keyPoint,
         category: form.category.value,
-        talent: form.talent.value,
         status: form.status,
         tickets: _temp,
+        talent: _temp_talent,
+        statusEvent: form.statusEvent.value,
       };
 
       const res = await postData("/v1/cms/events", payload);
@@ -212,6 +223,35 @@ function EventsCreate() {
 
     _temp.splice(removeIndex, 1);
     setForm({ ...form, keyPoint: _temp });
+  };
+
+  const handleChangeSpeaker = async (e) => {
+    let _temp = [];
+
+    await e.forEach((target) => {
+      _temp.push(target);
+    });
+
+    setForm({ ...form, talent: _temp });
+  };
+
+  const handlePlusSpeaker = () => {
+    let _temp = [...form.talent];
+    _temp.push("");
+
+    setForm({ ...form, talent: _temp });
+  };
+
+  const handleMinusSpeaker = (index) => {
+    let _temp = [...form.talent];
+    let removeIndex = _temp
+      .map(function (_, i) {
+        return i;
+      })
+      .indexOf(index);
+
+    _temp.splice(removeIndex, 1);
+    setForm({ ...form, talent: _temp });
   };
 
   const handlePlusTicket = () => {
@@ -262,6 +302,7 @@ function EventsCreate() {
         isLoading={isLoading}
         listCategories={listCategories}
         listTalents={listTalents}
+        selectedSpeakers={selectedSpeakers}
         handleChange={handleChange}
         handleSubmit={handleSubmit}
         handleChangeKeyPoint={handleChangeKeyPoint}
@@ -270,6 +311,9 @@ function EventsCreate() {
         handlePlusTicket={handlePlusTicket}
         handleMinusTicket={handleMinusTicket}
         handleChangeTicket={handleChangeTicket}
+        handleChangeSpeaker={handleChangeSpeaker}
+        handlePlusSpeaker={handlePlusSpeaker}
+        handleMinusSpeaker={handleMinusSpeaker}
       />
     </Container>
   );

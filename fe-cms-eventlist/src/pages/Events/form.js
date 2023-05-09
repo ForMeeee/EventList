@@ -5,6 +5,8 @@ import {
   Figure,
   Form,
   FormControl,
+  FormGroup,
+  FormLabel,
   InputGroup,
   Row,
 } from "react-bootstrap";
@@ -12,6 +14,8 @@ import Button from "../../components/Button";
 import TextInputWithLabel from "../../components/TextInputWithLabel";
 import SelectBox from "../../components/SelectBox";
 import { config } from "../../configs";
+import Select from "react-select";
+import { useEffect } from "react";
 
 export default function EventsForm({
   handleSubmit,
@@ -21,13 +25,18 @@ export default function EventsForm({
   edit,
   listCategories,
   listTalents,
+  selectedSpeakers,
   handlePlusKeyPoint,
   handleChangeKeyPoint,
   handleMinusKeyPoint,
   handlePlusTicket,
   handleMinusTicket,
   handleChangeTicket,
+  handleChangeSpeaker,
 }) {
+  useEffect(() => {
+    console.log("form change", form);
+  }, [form]);
   return (
     <Form className="mb-2">
       <Row>
@@ -127,18 +136,38 @@ export default function EventsForm({
       </Button>
 
       <Row>
-        <Col>
-          <SelectBox
-            label={"Speaker"}
-            placeholder={"Masukan pembica"}
-            name="talent"
-            value={form.talent}
+        <Col sm={6}>
+          <FormLabel>Speaker</FormLabel>
+          <Select
             options={listTalents}
-            isClearable={true}
+            isMulti
+            onChange={handleChangeSpeaker}
+            value={form.talent}
+          />
+        </Col>
+
+        <Col sm={6}>
+          <SelectBox
+            label={"Status Event"}
+            placeholder={"Masukan status"}
+            name="statusEvent"
+            value={form.statusEvent}
+            options={[
+              {
+                label: "Published",
+                value: "Published",
+                target: { name: "statusEvent", value: "Published" },
+              },
+              {
+                label: "Draft",
+                value: "Draft",
+                target: { name: "statusEvent", value: "Draft" },
+              },
+            ]}
             handleChange={(e) => handleChange(e)}
           />
         </Col>
-        <Col>
+        <Col sm={6}>
           <TextInputWithLabel
             placeholder={"Masukan Avatar"}
             label={"Cover"}
@@ -207,16 +236,15 @@ export default function EventsForm({
               options={[
                 {
                   label: "aktif",
-                  value: true,
+                  value: "true",
                   target: { name: "statusTicketCategories", value: true },
                 },
                 {
                   label: "tidak aktif",
-                  value: false,
+                  value: "false",
                   target: { name: "statusTicketCategories", value: false },
                 },
               ]}
-              isClearable={true}
               handleChange={(e) => handleChangeTicket(e, index)}
             />
           </Col>
