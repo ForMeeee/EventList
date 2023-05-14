@@ -44,25 +44,25 @@ export default function About({ data }) {
             </Col>
           </Row>
           <div className="aboutUs-page_features">
-          <Row className="d-flex align-items-center my-5">
-            <Col xs="12" lg="6">
-              <div className="p-4">
-                <Image src={`/images/about-us-device.png`} fluid />
-              </div>
-            </Col>
-            <Col xs="12" lg="6">
-              <div className="welcome-text-2">
-                <h3>EventList</h3>
-                <span>
-                  Our solution is end-to-end, ranges from web and app-based
-                  ticketing marketplace, online booking and reservation system
-                  to on-ground visitation management handling. Our features also
-                  supports promotion for your businesses and connect with your
-                  customers.
-                </span>
-              </div>
-            </Col>
-          </Row>
+            <Row className="d-flex align-items-center my-5">
+              <Col xs="12" lg="6">
+                <div className="p-4">
+                  <Image src={`/images/about-us-device.png`} fluid />
+                </div>
+              </Col>
+              <Col xs="12" lg="6">
+                <div className="welcome-text-2">
+                  <h3>EventList</h3>
+                  <span>
+                    Our solution is end-to-end, ranges from web and app-based
+                    ticketing marketplace, online booking and reservation system
+                    to on-ground visitation management handling. Our features
+                    also supports promotion for your businesses and connect with
+                    your customers.
+                  </span>
+                </div>
+              </Col>
+            </Row>
           </div>
           <div className="image-group my-5">
             <Image
@@ -74,17 +74,18 @@ export default function About({ data }) {
             <Col xs="12" lg="8">
               <h3>Our Mission</h3>
               <p>
-                Our mission - Connecting People with Experience - is the premise
-                that should be achieved by experience businesses. We believe
-                fairness in partnership not only continuing growth on us, but
-                our partners as well. That is why we "run" with them to growth,
-                sustainability, hassle-free business process and be ready to
-                overcome future disruptions. Our digital ecosystem is
-                customer-centric, make them our ultimate priority.
+                Our mission - provide a great event experience and connect the
+                community with events that inspire and educate. We are committed
+                to being a platform that facilitates the easy sale of event
+                tickets, providing broad access for users to find events that
+                are relevant to their interests and preferences.
               </p>
               <p>
-                We help drive innovation across industries: from entertainment,
-                tourism to education, let's thrive together!
+                We also want to empower individuals and communities to easily
+                organize their own events through our platform. In doing so, we
+                look forward to embracing a diversity of events, from seminars
+                and conferences to concerts, art exhibitions, festivals and
+                more.
               </p>
             </Col>
           </Row>

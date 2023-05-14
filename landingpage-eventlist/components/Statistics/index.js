@@ -16,7 +16,7 @@ export default function Statistics() {
         <div className="vr d-none d-md-block"></div>
         <div className="d-flex flex-column align-items-center gap-1">
           <div className="title">5K+</div>
-          <p>Success Startup</p>
+          <p>Success Events</p>
         </div>
         <div className="vr"></div>
         <div className="d-flex flex-column align-items-center gap-1">
