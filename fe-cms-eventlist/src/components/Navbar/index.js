@@ -33,7 +33,7 @@ export default function Header() {
   return (
     <Navbar bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">Logo</Navbar.Brand>
+        <Navbar.Brand href="#home">EventList</Navbar.Brand>
         <Nav className="me-auto">
           <NavLink role={role} roles={accessCategories.lihat} to="/">
             Home
