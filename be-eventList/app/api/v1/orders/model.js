@@ -54,8 +54,8 @@ const orderSchema = new mongoose.Schema(
     personalDetail: personalDetailSchema,
     status: {
       type: String,
-      enum: ["pending", "paid"],
-      default: "pending",
+      enum: ["paid"],
+      default: "paid",
     },
     totalPay: {
       type: Number,

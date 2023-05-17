@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import BreadCrumb from "../../components/BreadCrumb";
 import { fetchOrderDetail } from "../../redux/orders/actions";
 
-export default function OrderDetail() {
+export default function OrderDetail({ handleSubmit, Submit, handleChange, isLoading }) {
     const dispatch = useDispatch();
     const { id } = useParams();
 
@@ -152,9 +152,9 @@ export default function OrderDetail() {
                                         <Form.Label column xs="12" lg="4">Status Payment</Form.Label>
                                         <Col xs="12" lg="8">
                                             <Form.Select value={orders.data.status}>
-                                                <option value={"pending"}>pending</option>
-                                                <option value={"paid"}>paid</option>
-                                                <option value={"failed"}>failed</option>
+                                                <option value={"paid"}>Paid</option>
+                                                {/* <option value={"pending"}>pending</option>
+                                                <option value={"failed"}>failed</option> */}
                                             </Form.Select>
                                         </Col>
                                     </FormGroup>
@@ -165,7 +165,9 @@ export default function OrderDetail() {
 
                     <div className="d-flex justify-content-center p-2 border rounded mb-4">
                         <div>
-                            <button className="btn btn-success">Submit</button>
+                            <button className="btn btn-success" action={handleSubmit} loading={isLoading}>
+                                {Submit ? "Submit" : "Simpan"}
+                            </button>
                         </div>
                     </div>
                 </>

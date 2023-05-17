@@ -64,7 +64,6 @@ export default function OrdersPage() {
       <Row>
         <Col>
           {/*
-           * todo
            * mapping data orders
            */}
           <Table striped bordered hover className="my-3">

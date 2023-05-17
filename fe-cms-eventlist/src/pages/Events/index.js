@@ -85,7 +85,7 @@ export default function EventsPage() {
             handleChange={(value) => dispatch(setCategory(value))}
           />
         </Col>
-        <Col>
+        {/* <Col>
           <SelectBox
             placeholder={"Masukan pencarian pembicara"}
             value={events.talent}
@@ -93,7 +93,7 @@ export default function EventsPage() {
             isClearable={true}
             handleChange={(value) => dispatch(setTalent(value))}
           />
-        </Col>
+        </Col> */}
       </Row>
 
       <Table striped bordered hover className="my-3">
@@ -103,7 +103,7 @@ export default function EventsPage() {
             <th>Tempat</th>
             <th>Status</th>
             <th>Kategori</th>
-            <th>Pembicara</th>
+            {/* <th>Pembicara</th> */}
             <th>Aksi</th>
           </tr>
         </thead>
@@ -123,7 +123,7 @@ export default function EventsPage() {
                 <td>{data.venueName}</td>
                 <td>{data.statusEvent}</td>
                 <td>{data.category.name}</td>
-                <td>{data.talent.name}</td>
+                {/* <td>{data.talent.name}</td> */}
                 <td>
                   <SButton
                     size="sm"
