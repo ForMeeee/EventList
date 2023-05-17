@@ -11,7 +11,7 @@
     "email": "sasyam011@gmail.com",
     "role": "User"
   },
-  "status": "pending",
+  "status": "paid",
   "totalPay": 15000,
   "totalOrderTicket": 1,
   "orderItems": [
@@ -65,6 +65,706 @@
   },
   "updatedAt": {
     "$date": "2023-04-11T09:43:05.547Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64547640b3bb6804714a21c7"
+  },
+  "date": {
+    "$date": "2023-05-05T03:21:36.503Z"
+  },
+  "personalDetail": {
+    "firstName": "Daf",
+    "lastName": "Daffa",
+    "email": "sasyam011@gmail.com",
+    "role": "User",
+    "_id": {
+      "$oid": "64547640b3bb6804714a21c8"
+    }
+  },
+  "status": "paid",
+  "totalPay": 50000,
+  "totalOrderTicket": 1,
+  "orderItems": [
+    {
+      "ticketCategories": {
+        "_id": "64547302b3bb6804714a20e2",
+        "type": "Early Bird",
+        "price": 50000
+      },
+      "userTickets": [
+        {
+          "firstName": "Daf",
+          "lastName": "Daffa",
+          "email": "sasyam011@gmail.com",
+          "role": "User",
+          "_id": {
+            "$oid": "64547640b3bb6804714a21ca"
+          }
+        }
+      ],
+      "sumTicket": 1,
+      "_id": {
+        "$oid": "64547640b3bb6804714a21c9"
+      }
+    }
+  ],
+  "participant": {
+    "$oid": "63e436bb79ee73be7a687e92"
+  },
+  "payment": {
+    "$oid": "64081dd039a47c8177702bcc"
+  },
+  "event": {
+    "$oid": "645284008c9992944cc64af2"
+  },
+  "historyEvent": {
+    "title": "Irreducible",
+    "date": {
+      "$date": "2023-06-10T15:00:00.000Z"
+    },
+    "about": "Brigata Curva Sud or better known as BCS is a community of PSS Sleman supporters that was founded on February 5, 2011. Our community was formed on the basis of the spirit of togetherness in supporting.  It started with only 7 communities containing less than 100 people, ULTRAS PSS was one of them. Now we have grown to reach 500 communities in 2023 spread throughout Indonesia and abroad.",
+    "tagline": "SID",
+    "keyPoint": [
+      "SID"
+    ],
+    "venueName": "Maguwoharjo Stadium | West Park",
+    "image": {
+      "$oid": "645283f68c9992944cc64aec"
+    },
+    "category": {
+      "$oid": "64081ac339a47c8177702b2f"
+    },
+    "talent": [
+      {
+        "$oid": "645283498c9992944cc64ad5"
+      },
+      {
+        "$oid": "6454562634f60de556047706"
+      }
+    ],
+    "organizer": {
+      "$oid": "6407de68e588fd2aee5db337"
+    }
+  },
+  "createdAt": {
+    "$date": "2023-05-05T03:21:36.513Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-05T03:21:36.513Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6454d4a49420cf835e24b05e"
+  },
+  "date": {
+    "$date": "2023-05-05T10:04:20.025Z"
+  },
+  "personalDetail": {
+    "firstName": "Daf",
+    "lastName": "Daffa",
+    "email": "sasyam011@gmail.com",
+    "role": "User",
+    "_id": {
+      "$oid": "6454d4a49420cf835e24b05f"
+    }
+  },
+  "status": "paid",
+  "totalPay": 25000,
+  "totalOrderTicket": 1,
+  "orderItems": [
+    {
+      "ticketCategories": {
+        "_id": "6453e05615f3d079d499418b",
+        "type": "Presale 1",
+        "price": 25000
+      },
+      "userTickets": [
+        {
+          "firstName": "Daf",
+          "lastName": "Daffa",
+          "email": "sasyam011@gmail.com",
+          "role": "User",
+          "_id": {
+            "$oid": "6454d4a49420cf835e24b061"
+          }
+        }
+      ],
+      "sumTicket": 1,
+      "_id": {
+        "$oid": "6454d4a49420cf835e24b060"
+      }
+    }
+  ],
+  "participant": {
+    "$oid": "64522fc642da16c17b23e145"
+  },
+  "payment": {
+    "$oid": "6434f48f27a15a89e782b8c3"
+  },
+  "event": {
+    "$oid": "64081cab39a47c8177702b68"
+  },
+  "historyEvent": {
+    "title": "ParadieFest 2023",
+    "date": {
+      "$date": "2023-04-10T05:00:00.000Z"
+    },
+    "about": "Paradicfest Merupakan Konser Musik Yang Diselenggarakan Oleh Ikamia Uin Malang. Mengundang Guest Star Ternama Yang Akan Diselenggarakan Di Graha Cakrawala Kota Malang.",
+    "tagline": "Konser UIN Malang",
+    "keyPoint": [
+      "Fest 2023",
+      "Musik"
+    ],
+    "venueName": "Malang",
+    "image": {
+      "$oid": "64081c3539a47c8177702b62"
+    },
+    "category": {
+      "$oid": "64081ae439a47c8177702b37"
+    },
+    "talent": [
+      {
+        "$oid": "64081d0b39a47c8177702b8a"
+      },
+      {
+        "$oid": "64081d6739a47c8177702bab"
+      },
+      {
+        "$oid": "64081d4b39a47c8177702ba3"
+      }
+    ],
+    "organizer": {
+      "$oid": "6407de68e588fd2aee5db337"
+    }
+  },
+  "createdAt": {
+    "$date": "2023-05-05T10:04:20.034Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-05T10:04:20.034Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6454d5c89420cf835e24b0c1"
+  },
+  "date": {
+    "$date": "2023-05-05T10:09:12.219Z"
+  },
+  "personalDetail": {
+    "firstName": "Daf",
+    "lastName": "Daffa",
+    "email": "aaadiwahyu@gmail.com",
+    "role": "Talent",
+    "_id": {
+      "$oid": "6454d5c89420cf835e24b0c2"
+    }
+  },
+  "status": "paid",
+  "totalPay": 25000,
+  "totalOrderTicket": 1,
+  "orderItems": [
+    {
+      "ticketCategories": {
+        "_id": "6453e05615f3d079d499418b",
+        "type": "Presale 1",
+        "price": 25000
+      },
+      "userTickets": [
+        {
+          "firstName": "Adi",
+          "lastName": "Wahyu",
+          "email": "Aaadiwahyu@gmail.com",
+          "role": "User",
+          "_id": {
+            "$oid": "6454d5c89420cf835e24b0c4"
+          }
+        }
+      ],
+      "sumTicket": 1,
+      "_id": {
+        "$oid": "6454d5c89420cf835e24b0c3"
+      }
+    }
+  ],
+  "participant": {
+    "$oid": "64522fc642da16c17b23e145"
+  },
+  "payment": {
+    "$oid": "6434f48f27a15a89e782b8c3"
+  },
+  "event": {
+    "$oid": "64081cab39a47c8177702b68"
+  },
+  "historyEvent": {
+    "title": "ParadieFest 2023",
+    "date": {
+      "$date": "2023-04-10T05:00:00.000Z"
+    },
+    "about": "Paradicfest Merupakan Konser Musik Yang Diselenggarakan Oleh Ikamia Uin Malang. Mengundang Guest Star Ternama Yang Akan Diselenggarakan Di Graha Cakrawala Kota Malang.",
+    "tagline": "Konser UIN Malang",
+    "keyPoint": [
+      "Fest 2023",
+      "Musik"
+    ],
+    "venueName": "Malang",
+    "image": {
+      "$oid": "64081c3539a47c8177702b62"
+    },
+    "category": {
+      "$oid": "64081ae439a47c8177702b37"
+    },
+    "talent": [
+      {
+        "$oid": "64081d0b39a47c8177702b8a"
+      },
+      {
+        "$oid": "64081d6739a47c8177702bab"
+      },
+      {
+        "$oid": "64081d4b39a47c8177702ba3"
+      }
+    ],
+    "organizer": {
+      "$oid": "6407de68e588fd2aee5db337"
+    }
+  },
+  "createdAt": {
+    "$date": "2023-05-05T10:09:12.224Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-05T10:09:12.224Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645527a8e8ebe49b874422de"
+  },
+  "date": {
+    "$date": "2023-05-05T15:58:32.255Z"
+  },
+  "personalDetail": {
+    "firstName": "Adi",
+    "lastName": "Wahyu",
+    "email": "Aaadiwahyu@gmail.com",
+    "role": "User",
+    "_id": {
+      "$oid": "645527a8e8ebe49b874422df"
+    }
+  },
+  "status": "paid",
+  "totalPay": 50000,
+  "totalOrderTicket": 1,
+  "orderItems": [
+    {
+      "ticketCategories": {
+        "_id": "6455215843c94d9863357116",
+        "type": "Early Bird",
+        "price": 50000
+      },
+      "userTickets": [
+        {
+          "firstName": "Adi",
+          "lastName": "Wahyu",
+          "email": "Aaadiwahyu@gmail.com",
+          "role": "User",
+          "_id": {
+            "$oid": "645527a8e8ebe49b874422e1"
+          }
+        }
+      ],
+      "sumTicket": 1,
+      "_id": {
+        "$oid": "645527a8e8ebe49b874422e0"
+      }
+    }
+  ],
+  "participant": {
+    "$oid": "64522fc642da16c17b23e145"
+  },
+  "payment": {
+    "$oid": "6434f48f27a15a89e782b8c3"
+  },
+  "event": {
+    "$oid": "64551a9143c94d9863356f4e"
+  },
+  "historyEvent": {
+    "title": "GLORIOUS",
+    "date": {
+      "$date": "2023-05-12T14:00:00.000Z"
+    },
+    "about": "Paradicfest Merupakan Konser Musik Yang Diselenggarakan Oleh Ikamia Uin Malang. Mengundang Guest Star Ternama Yang Akan Diselenggarakan Di Graha Cakrawala Kota Malang.",
+    "tagline": "GLORIOUS",
+    "keyPoint": [
+      "GLORIOUS"
+    ],
+    "venueName": "Maguwoharjo Stadium | West Park",
+    "image": {
+      "$oid": "645517f043c94d9863356f2d"
+    },
+    "category": {
+      "$oid": "64081ae439a47c8177702b37"
+    },
+    "talent": [
+      {
+        "$oid": "64547f39b3bb6804714a2370"
+      },
+      {
+        "$oid": "6437829c0078eb651120b07f"
+      }
+    ],
+    "organizer": {
+      "$oid": "6407de68e588fd2aee5db337"
+    }
+  },
+  "createdAt": {
+    "$date": "2023-05-05T15:58:32.261Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-05T15:58:32.261Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645c304632ef6ba8a88a2d0b"
+  },
+  "date": {
+    "$date": "2023-05-11T00:01:10.256Z"
+  },
+  "personalDetail": {
+    "firstName": "Daf",
+    "lastName": "Daffa",
+    "email": "sasyam011@gmail.com",
+    "role": "User",
+    "_id": {
+      "$oid": "645c304632ef6ba8a88a2d0c"
+    }
+  },
+  "status": "paid",
+  "totalPay": 50000,
+  "totalOrderTicket": 1,
+  "orderItems": [
+    {
+      "ticketCategories": {
+        "_id": "645898240e2f4837900331ab",
+        "type": "Early Bird",
+        "price": 50000
+      },
+      "userTickets": [
+        {
+          "firstName": "Daf",
+          "lastName": "Daffa",
+          "email": "sasyam011@gmail.com",
+          "role": "User",
+          "_id": {
+            "$oid": "645c304632ef6ba8a88a2d0e"
+          }
+        }
+      ],
+      "sumTicket": 1,
+      "_id": {
+        "$oid": "645c304632ef6ba8a88a2d0d"
+      }
+    }
+  ],
+  "participant": {
+    "$oid": "63e436bb79ee73be7a687e92"
+  },
+  "payment": {
+    "$oid": "64081dd039a47c8177702bcc"
+  },
+  "event": {
+    "$oid": "64551a9143c94d9863356f4e"
+  },
+  "historyEvent": {
+    "title": "GLORIOUS",
+    "date": {
+      "$date": "2023-05-12T14:00:00.000Z"
+    },
+    "about": "Paradicfest Merupakan Konser Musik Yang Diselenggarakan Oleh Ikamia Uin Malang. Mengundang Guest Star Ternama Yang Akan Diselenggarakan Di Graha Cakrawala Kota Malang.",
+    "tagline": "GLORIOUS",
+    "keyPoint": [
+      "GLORIOUS"
+    ],
+    "venueName": "Maguwoharjo Stadium | West Park",
+    "image": {
+      "$oid": "645517f043c94d9863356f2d"
+    },
+    "category": {
+      "$oid": "64081ae439a47c8177702b37"
+    },
+    "talent": [
+      {
+        "$oid": "64547f39b3bb6804714a2370"
+      }
+    ],
+    "organizer": {
+      "$oid": "6407de68e588fd2aee5db337"
+    }
+  },
+  "createdAt": {
+    "$date": "2023-05-11T00:01:10.263Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-11T00:01:10.263Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "646244add5208d724ce16072"
+  },
+  "date": {
+    "$date": "2023-05-15T14:41:49.407Z"
+  },
+  "personalDetail": {
+    "firstName": "User",
+    "lastName": "Daffa",
+    "email": "devtempmail1+ltvgcburgp@gmail.com",
+    "role": "User",
+    "_id": {
+      "$oid": "646244add5208d724ce16073"
+    }
+  },
+  "status": "paid",
+  "totalPay": 75000,
+  "totalOrderTicket": 1,
+  "orderItems": [
+    {
+      "ticketCategories": {
+        "_id": "646243c7d5208d724ce1603c",
+        "type": "Presale",
+        "price": 75000
+      },
+      "userTickets": [
+        {
+          "firstName": "User",
+          "lastName": "Daffa",
+          "email": "devtempmail1+ltvgcburgp@gmail.com",
+          "role": "User",
+          "_id": {
+            "$oid": "646244add5208d724ce16075"
+          }
+        }
+      ],
+      "sumTicket": 1,
+      "_id": {
+        "$oid": "646244add5208d724ce16074"
+      }
+    }
+  ],
+  "participant": {
+    "$oid": "64624152d5208d724ce15477"
+  },
+  "payment": {
+    "$oid": "64081dd039a47c8177702bcc"
+  },
+  "event": {
+    "$oid": "64551a9143c94d9863356f4e"
+  },
+  "historyEvent": {
+    "title": "GLORIOUS",
+    "date": {
+      "$date": "2023-05-12T14:00:00.000Z"
+    },
+    "about": "Paradicfest Merupakan Konser Musik Yang Diselenggarakan Oleh Ikamia Uin Malang. Mengundang Guest Star Ternama Yang Akan Diselenggarakan Di Graha Cakrawala Kota Malang.",
+    "tagline": "GLORIOUS",
+    "keyPoint": [
+      "GLORIOUS"
+    ],
+    "venueName": "Maguwoharjo Stadium | West Park",
+    "image": {
+      "$oid": "646078ac2897f637db7770c4"
+    },
+    "category": {
+      "$oid": "64081ae439a47c8177702b37"
+    },
+    "talent": [
+      {
+        "$oid": "64547f39b3bb6804714a2370"
+      }
+    ],
+    "organizer": {
+      "$oid": "6407de68e588fd2aee5db337"
+    }
+  },
+  "createdAt": {
+    "$date": "2023-05-15T14:41:49.415Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-15T14:41:49.415Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6462f4bf2f716692a74298cc"
+  },
+  "date": {
+    "$date": "2023-05-16T03:13:03.078Z"
+  },
+  "personalDetail": {
+    "firstName": "User",
+    "lastName": "Daffa",
+    "email": "devtempmail1+mnsbdqgtjt@gmail.com",
+    "role": "User",
+    "_id": {
+      "$oid": "6462f4bf2f716692a74298cd"
+    }
+  },
+  "status": "paid",
+  "totalPay": 65000,
+  "totalOrderTicket": 1,
+  "orderItems": [
+    {
+      "ticketCategories": {
+        "_id": "6462f29b2f716692a742987a",
+        "type": "Early Bird",
+        "price": 65000
+      },
+      "userTickets": [
+        {
+          "firstName": "User",
+          "lastName": "Daffa",
+          "email": "devtempmail1+mnsbdqgtjt@gmail.com",
+          "role": "User",
+          "_id": {
+            "$oid": "6462f4bf2f716692a74298cf"
+          }
+        }
+      ],
+      "sumTicket": 1,
+      "_id": {
+        "$oid": "6462f4bf2f716692a74298ce"
+      }
+    }
+  ],
+  "participant": {
+    "$oid": "6462dd23e6faf7868d20c5aa"
+  },
+  "payment": {
+    "$oid": "64081dd039a47c8177702bcc"
+  },
+  "event": {
+    "$oid": "6462f14c2f716692a7429831"
+  },
+  "historyEvent": {
+    "title": "ComdeyFest",
+    "date": {
+      "$date": "2023-05-18T02:00:00.000Z"
+    },
+    "about": "Standup Fest, yang merupakan event tahunan dari Standupindo, menjadi wadah bagi para komika untuk tampil di depan publik. Selama tiga hari berturut-turut, puluhan komika dari seluruh Indonesia akan memeriahkan acara ini dengan penampilan mereka di panggung indoor dan outdoor. Para penonton akan disajikan beragam jenis humor, mulai dari yang klasik hingga yang modern, untuk menghibur mereka sepanjang acara.",
+    "tagline": "ComdeyFest",
+    "keyPoint": [
+      "ComdeyFest"
+    ],
+    "venueName": "Edutorium UMS, Solo",
+    "image": {
+      "$oid": "6462f1382f716692a742982b"
+    },
+    "category": {
+      "$oid": "6462ef6e2f716692a7429775"
+    },
+    "talent": [
+      {
+        "$oid": "6462ef932f716692a742977e"
+      }
+    ],
+    "organizer": {
+      "$oid": "6407de68e588fd2aee5db337"
+    }
+  },
+  "createdAt": {
+    "$date": "2023-05-16T03:13:03.087Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-16T03:13:03.087Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "646326d3c0ce2f04622630a3"
+  },
+  "date": {
+    "$date": "2023-05-16T06:46:43.287Z"
+  },
+  "personalDetail": {
+    "firstName": "User",
+    "lastName": "Daffa",
+    "email": "devtempmail1+snbtsfvybt@gmail.com",
+    "role": "User",
+    "_id": {
+      "$oid": "646326d3c0ce2f04622630a4"
+    }
+  },
+  "status": "paid",
+  "totalPay": 200000,
+  "totalOrderTicket": 1,
+  "orderItems": [
+    {
+      "ticketCategories": {
+        "_id": "646078a12897f637db777099",
+        "type": "Presale 1",
+        "price": 200000
+      },
+      "userTickets": [
+        {
+          "firstName": "User",
+          "lastName": "Daffa",
+          "email": "devtempmail1+snbtsfvybt@gmail.com",
+          "role": "User",
+          "_id": {
+            "$oid": "646326d3c0ce2f04622630a6"
+          }
+        }
+      ],
+      "sumTicket": 1,
+      "_id": {
+        "$oid": "646326d3c0ce2f04622630a5"
+      }
+    }
+  ],
+  "participant": {
+    "$oid": "646325dec0ce2f0462262b2f"
+  },
+  "payment": {
+    "$oid": "64081dd039a47c8177702bcc"
+  },
+  "event": {
+    "$oid": "645285d08c9992944cc64b8f"
+  },
+  "historyEvent": {
+    "title": "Crowdland Fest",
+    "date": {
+      "$date": "2023-07-29T16:00:00.000Z"
+    },
+    "about": "Crowdland Fest adalah sebuah konser musik yang menampilkan 12 artis nasional, dengan genre pop-rock, alternative. So Get ready to the crowd !!",
+    "tagline": "Crowdland Fest",
+    "keyPoint": [
+      "Crowdland Fest"
+    ],
+    "venueName": "Yogyakarta | Mandala Krida Yogyakarta",
+    "image": {
+      "$oid": "646078a02897f637db777092"
+    },
+    "category": {
+      "$oid": "64081ae439a47c8177702b37"
+    },
+    "talent": [
+      {
+        "$oid": "645284f48c9992944cc64b51"
+      }
+    ],
+    "organizer": {
+      "$oid": "6407de68e588fd2aee5db337"
+    }
+  },
+  "createdAt": {
+    "$date": "2023-05-16T06:46:43.293Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-16T06:46:43.293Z"
   },
   "__v": 0
 }]

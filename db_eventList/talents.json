@@ -93,4 +93,175 @@
     "$date": "2023-04-11T16:21:28.571Z"
   },
   "__v": 0
+},{
+  "_id": {
+    "$oid": "6437829c0078eb651120b07f"
+  },
+  "name": "Dewa 19",
+  "role": "Talent",
+  "image": {
+    "$oid": "6437829b0078eb651120b07b"
+  },
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-04-13T04:18:36.995Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-13T04:18:36.995Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643787950078eb651120b11b"
+  },
+  "name": "Noah",
+  "role": "Talent",
+  "image": {
+    "$oid": "643787940078eb651120b117"
+  },
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-04-13T04:39:49.704Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-13T04:39:49.704Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645283498c9992944cc64ad5"
+  },
+  "name": "SUPERMAN IS DEAD (SID)",
+  "role": "Talent",
+  "image": {
+    "$oid": "645283488c9992944cc64ad1"
+  },
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-05-03T15:52:41.100Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-03T15:52:41.100Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645284f48c9992944cc64b51"
+  },
+  "name": "Danila",
+  "role": "Talent",
+  "image": {
+    "$oid": "645284f28c9992944cc64b4d"
+  },
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-05-03T15:59:48.933Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-03T15:59:48.933Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6454562634f60de556047706"
+  },
+  "name": "OVER DISTORTION",
+  "role": "Talent",
+  "image": {
+    "$oid": "6454561e34f60de556047702"
+  },
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-05-05T01:04:38.143Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-05T01:04:38.143Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64547f39b3bb6804714a2370"
+  },
+  "name": "SOULJAH",
+  "role": "Talent",
+  "image": {
+    "$oid": "64547f38b3bb6804714a236c"
+  },
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-05-05T03:59:53.122Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-05T03:59:53.122Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64607a082897f637db777216"
+  },
+  "name": "User",
+  "role": "Talent",
+  "image": {
+    "$oid": "64607a072897f637db777212"
+  },
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-05-14T06:04:56.792Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T06:04:56.792Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6462ef932f716692a742977e"
+  },
+  "name": "Comedy",
+  "role": "Talent",
+  "image": {
+    "$oid": "6462ef922f716692a742977a"
+  },
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-05-16T02:50:59.666Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-16T02:50:59.666Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64632739c0ce2f04622630ed"
+  },
+  "name": "Daffa",
+  "role": "User",
+  "image": {
+    "$oid": "64632736c0ce2f04622630e9"
+  },
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-05-16T06:48:25.887Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-16T06:48:25.887Z"
+  },
+  "__v": 0
 }]

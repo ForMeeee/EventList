@@ -18,31 +18,39 @@
     {
       "type": "Early Bird",
       "price": 15000,
-      "stock": 1,
+      "stock": 0,
       "statusTicketCategories": true,
       "_id": {
-        "$oid": "64361e306426deb63e661094"
+        "$oid": "646078622897f637db776fdc"
       }
     },
     {
       "type": "Presale 1",
       "price": 25000,
-      "stock": 2,
+      "stock": 0,
       "statusTicketCategories": true,
       "_id": {
-        "$oid": "64361e306426deb63e661095"
+        "$oid": "646078622897f637db776fdd"
       }
     }
   ],
   "image": {
-    "$oid": "64081c3539a47c8177702b62"
+    "$oid": "6460785d2897f637db776fd4"
   },
   "category": {
     "$oid": "64081ae439a47c8177702b37"
   },
-  "talent": {
-    "$oid": "64081d0b39a47c8177702b8a"
-  },
+  "talent": [
+    {
+      "$oid": "64081d0b39a47c8177702b8a"
+    },
+    {
+      "$oid": "64081d6739a47c8177702bab"
+    },
+    {
+      "$oid": "64081d4b39a47c8177702ba3"
+    }
+  ],
   "organizer": {
     "$oid": "6407de68e588fd2aee5db337"
   },
@@ -50,16 +58,16 @@
     "$date": "2023-03-08T05:27:07.225Z"
   },
   "updatedAt": {
-    "$date": "2023-04-12T02:57:52.809Z"
+    "$date": "2023-05-14T05:57:54.745Z"
   },
   "__v": 0
 },{
   "_id": {
     "$oid": "64358b4927a15a89e782be07"
   },
-  "title": "Getting Started on Front End Development",
+  "title": "Front End Development",
   "date": {
-    "$date": "2023-04-11T16:29:00.000Z"
+    "$date": "2023-04-11T16:00:00.000Z"
   },
   "about": "Hayy Everyone! ✨    Want to know more about front-end development and are interested in learning but don’t know where to start?     Here we are! ☺️  We have the workshop for you to introduce you to front end development   Let’s join “Getting Started on Front End Development” ",
   "tagline": "Workshop",
@@ -72,22 +80,24 @@
     {
       "type": "Early Bird",
       "price": 50000,
-      "stock": 2,
+      "stock": 1,
       "statusTicketCategories": true,
       "_id": {
-        "$oid": "64358b4927a15a89e782be08"
+        "$oid": "646081032897f637db7773a9"
       }
     }
   ],
   "image": {
-    "$oid": "64358b2c27a15a89e782be01"
+    "$oid": "646081002897f637db7773a3"
   },
   "category": {
     "$oid": "64081ac339a47c8177702b2f"
   },
-  "talent": {
-    "$oid": "6435890827a15a89e782bd5b"
-  },
+  "talent": [
+    {
+      "$oid": "6435890827a15a89e782bd5b"
+    }
+  ],
   "organizer": {
     "$oid": "6407de68e588fd2aee5db337"
   },
@@ -95,7 +105,433 @@
     "$date": "2023-04-11T16:31:05.239Z"
   },
   "updatedAt": {
-    "$date": "2023-04-11T16:31:05.239Z"
+    "$date": "2023-05-14T06:34:43.993Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643784b90078eb651120b09a"
+  },
+  "title": "A Night at The Orchestra chapter 4",
+  "date": {
+    "$date": "2023-05-27T04:00:00.000Z"
+  },
+  "about": "🎶A Night at The Orchestra🎶   Selain menggelar A Night at The Orchestra chapter 3 Di Surabaya, @redline.kreasindo akan mempersembahkan A Night at The Orchestra chapter 4 di Edutorium UMS, Solo pada tanggal 27 May 2023  Sensasi peradaban baru berlanjut, dapatkan pengalaman baru yang tak terlupakan. Persembahan dari sang legend @officialdewa19 “A Night at The Orchestra” chapter 4 di Solo. @officialdewa19 akan ft dengan @ari_lasso @virzhaofficial @marcello_tahitoe  Tentunya akan ada guest star dari @mulanjameela1 @ardhitopramono ",
+  "tagline": "Dewa 19",
+  "keyPoint": [
+    "Dewa 19",
+    "MusicConcert"
+  ],
+  "venueName": "Edutorium UMS, Solo",
+  "statusEvent": "Draft",
+  "tickets": [
+    {
+      "type": "Presale",
+      "price": 450000,
+      "stock": 2,
+      "statusTicketCategories": true,
+      "_id": {
+        "$oid": "6460811f2897f637db7773f2"
+      }
+    }
+  ],
+  "image": {
+    "$oid": "646078892897f637db777034"
+  },
+  "category": {
+    "$oid": "64081ae439a47c8177702b37"
+  },
+  "talent": [
+    {
+      "$oid": "6437829c0078eb651120b07f"
+    }
+  ],
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-04-13T04:27:37.712Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T06:35:11.105Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643789b80078eb651120b178"
+  },
+  "title": "NOAH @ Live in Japan 2023",
+  "date": {
+    "$date": "2023-05-02T13:00:00.000Z"
+  },
+  "about": "こんにちは日本🇯🇵、久しぶり  Sampai jumpa di Gorilla Hall Osaka (大阪のゴリラホール) pada Hari Selasa, 2 Mei 2023  Untuk informasi tiket dan lainnya silahkan cek di @japanfuntour dan @soundIDFest  どうもありがとうございました 大阪で会いましょう",
+  "tagline": "Talent",
+  "keyPoint": [
+    "NOAHJapan ",
+    "SoundIDFest"
+  ],
+  "venueName": "Gorila Hall Osaka Japan",
+  "statusEvent": "Draft",
+  "tickets": [
+    {
+      "type": "Presale",
+      "price": 750000,
+      "stock": 2,
+      "statusTicketCategories": true,
+      "_id": {
+        "$oid": "6460832b2897f637db777535"
+      }
+    }
+  ],
+  "image": {
+    "$oid": "646078952897f637db777062"
+  },
+  "category": {
+    "$oid": "64081ae439a47c8177702b37"
+  },
+  "talent": [
+    {
+      "$oid": "643787950078eb651120b11b"
+    }
+  ],
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-04-13T04:48:56.024Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T06:43:55.149Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645284008c9992944cc64af2"
+  },
+  "title": "Irreducible",
+  "date": {
+    "$date": "2023-06-10T15:00:00.000Z"
+  },
+  "about": "Brigata Curva Sud or better known as BCS is a community of PSS Sleman supporters that was founded on February 5, 2011. Our community was formed on the basis of the spirit of togetherness in supporting.  It started with only 7 communities containing less than 100 people, ULTRAS PSS was one of them. Now we have grown to reach 500 communities in 2023 spread throughout Indonesia and abroad.",
+  "tagline": "SID",
+  "keyPoint": [
+    "SID"
+  ],
+  "venueName": "Maguwoharjo Stadium | West Park",
+  "statusEvent": "Published",
+  "tickets": [
+    {
+      "type": "Early Bird",
+      "price": 50000,
+      "stock": 0,
+      "statusTicketCategories": true,
+      "_id": {
+        "$oid": "646078cf2897f637db777136"
+      }
+    },
+    {
+      "type": "Presale 1",
+      "price": 76000,
+      "stock": 1,
+      "statusTicketCategories": true,
+      "_id": {
+        "$oid": "646078cf2897f637db777137"
+      }
+    }
+  ],
+  "image": {
+    "$oid": "646078cb2897f637db77712f"
+  },
+  "category": {
+    "$oid": "64081ae439a47c8177702b37"
+  },
+  "talent": [
+    {
+      "$oid": "645283498c9992944cc64ad5"
+    },
+    {
+      "$oid": "6454562634f60de556047706"
+    }
+  ],
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-05-03T15:55:44.399Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T05:59:43.196Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645285d08c9992944cc64b8f"
+  },
+  "title": "Crowdland Fest",
+  "date": {
+    "$date": "2023-07-29T16:00:00.000Z"
+  },
+  "about": "Crowdland Fest adalah sebuah konser musik yang menampilkan 12 artis nasional, dengan genre pop-rock, alternative. So Get ready to the crowd !!",
+  "tagline": "Crowdland Fest",
+  "keyPoint": [
+    "Crowdland Fest"
+  ],
+  "venueName": "Yogyakarta | Mandala Krida Yogyakarta",
+  "statusEvent": "Published",
+  "tickets": [
+    {
+      "type": "Early Bird",
+      "price": 160000,
+      "stock": 1,
+      "statusTicketCategories": false,
+      "_id": {
+        "$oid": "646078a12897f637db777098"
+      }
+    },
+    {
+      "type": "Presale 1",
+      "price": 200000,
+      "stock": 0,
+      "statusTicketCategories": true,
+      "_id": {
+        "$oid": "646078a12897f637db777099"
+      }
+    }
+  ],
+  "image": {
+    "$oid": "646078a02897f637db777092"
+  },
+  "category": {
+    "$oid": "64081ae439a47c8177702b37"
+  },
+  "talent": [
+    {
+      "$oid": "645284f48c9992944cc64b51"
+    }
+  ],
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-05-03T16:03:28.476Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-16T06:46:43.283Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64551a9143c94d9863356f4e"
+  },
+  "title": "GLORIOUS",
+  "date": {
+    "$date": "2023-05-12T14:00:00.000Z"
+  },
+  "about": "Paradicfest Merupakan Konser Musik Yang Diselenggarakan Oleh Ikamia Uin Malang. Mengundang Guest Star Ternama Yang Akan Diselenggarakan Di Graha Cakrawala Kota Malang.",
+  "tagline": "GLORIOUS",
+  "keyPoint": [
+    "GLORIOUS"
+  ],
+  "venueName": "Maguwoharjo Stadium | West Park",
+  "statusEvent": "Published",
+  "tickets": [
+    {
+      "type": "Early Bird",
+      "price": 50000,
+      "stock": 0,
+      "statusTicketCategories": true,
+      "_id": {
+        "$oid": "646243c7d5208d724ce1603b"
+      }
+    },
+    {
+      "type": "Presale",
+      "price": 75000,
+      "stock": 1,
+      "statusTicketCategories": true,
+      "_id": {
+        "$oid": "646243c7d5208d724ce1603c"
+      }
+    }
+  ],
+  "image": {
+    "$oid": "646078ac2897f637db7770c4"
+  },
+  "category": {
+    "$oid": "64081ae439a47c8177702b37"
+  },
+  "talent": [
+    {
+      "$oid": "64547f39b3bb6804714a2370"
+    }
+  ],
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-05-05T15:02:41.199Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-15T14:41:49.401Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6460829d2897f637db7774b9"
+  },
+  "title": "Back End Development",
+  "date": {
+    "$date": "2023-05-14T06:39:00.000Z"
+  },
+  "about": "Hayy Everyone! ✨ Want to know more about back-end development and are interested in learning but don’t know where to start? Here we are! ☺️ We have the workshop for you to introduce you to front end development Let’s join “Getting Started on Back End Development”",
+  "tagline": "Workshop",
+  "keyPoint": [
+    "Back End"
+  ],
+  "venueName": "Online Via Zoom",
+  "statusEvent": "Published",
+  "tickets": [
+    {
+      "type": "Early Bird",
+      "price": 55000,
+      "stock": 1,
+      "statusTicketCategories": true,
+      "_id": {
+        "$oid": "6460829d2897f637db7774ba"
+      }
+    }
+  ],
+  "image": {
+    "$oid": "646082702897f637db77747d"
+  },
+  "category": {
+    "$oid": "64081ac339a47c8177702b2f"
+  },
+  "talent": [
+    {
+      "$oid": "6435890827a15a89e782bd5b"
+    }
+  ],
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-05-14T06:41:33.641Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T06:41:33.641Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6462f14c2f716692a7429831"
+  },
+  "title": "ComdeyFest",
+  "date": {
+    "$date": "2023-05-18T02:00:00.000Z"
+  },
+  "about": "Standup Fest, yang merupakan event tahunan dari Standupindo, menjadi wadah bagi para komika untuk tampil di depan publik. Selama tiga hari berturut-turut, puluhan komika dari seluruh Indonesia akan memeriahkan acara ini dengan penampilan mereka di panggung indoor dan outdoor. Para penonton akan disajikan beragam jenis humor, mulai dari yang klasik hingga yang modern, untuk menghibur mereka sepanjang acara.",
+  "tagline": "ComdeyFest",
+  "keyPoint": [
+    "ComdeyFest"
+  ],
+  "venueName": "Edutorium UMS, Solo",
+  "statusEvent": "Published",
+  "tickets": [
+    {
+      "type": "Early Bird",
+      "price": 65000,
+      "stock": 1,
+      "statusTicketCategories": true,
+      "_id": {
+        "$oid": "6462f29b2f716692a742987a"
+      }
+    },
+    {
+      "type": "Presale",
+      "price": 87000,
+      "stock": 2,
+      "statusTicketCategories": false,
+      "_id": {
+        "$oid": "6462f29b2f716692a742987b"
+      }
+    }
+  ],
+  "image": {
+    "$oid": "6462f1382f716692a742982b"
+  },
+  "category": {
+    "$oid": "6462ef6e2f716692a7429775"
+  },
+  "talent": [
+    {
+      "$oid": "6462ef932f716692a742977e"
+    }
+  ],
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-05-16T02:58:20.218Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-16T03:13:03.072Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64632794c0ce2f0462263113"
+  },
+  "title": "Seminar 2023",
+  "date": {
+    "$date": "2023-05-16T06:48:00.000Z"
+  },
+  "about": "Paradicfest Merupakan Konser Musik Yang Diselenggarakan Oleh Ikamia Uin Malang. Mengundang Guest Star Ternama Yang Akan Diselenggarakan Di Graha Cakrawala Kota Malang.",
+  "tagline": "Seminar 2023",
+  "keyPoint": [
+    "Seminar 2023"
+  ],
+  "venueName": "Edutorium UMS, Solo",
+  "statusEvent": "Published",
+  "tickets": [
+    {
+      "type": "Early Bird",
+      "price": 55000,
+      "stock": 1,
+      "statusTicketCategories": true,
+      "_id": {
+        "$oid": "64632794c0ce2f0462263114"
+      }
+    },
+    {
+      "type": "Presale",
+      "price": 99000,
+      "stock": 1,
+      "statusTicketCategories": false,
+      "_id": {
+        "$oid": "64632794c0ce2f0462263115"
+      }
+    }
+  ],
+  "image": {
+    "$oid": "6463277dc0ce2f046226310d"
+  },
+  "category": {
+    "$oid": "64632721c0ce2f04622630e4"
+  },
+  "talent": [
+    {
+      "$oid": "64632739c0ce2f04622630ed"
+    }
+  ],
+  "organizer": {
+    "$oid": "6407de68e588fd2aee5db337"
+  },
+  "createdAt": {
+    "$date": "2023-05-16T06:49:56.641Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-16T06:49:56.641Z"
   },
   "__v": 0
 }]

@@ -202,4 +202,400 @@
     "$date": "2023-04-11T16:30:36.669Z"
   },
   "__v": 0
+},{
+  "_id": {
+    "$oid": "6437829b0078eb651120b07b"
+  },
+  "name": "uploads/66124285-logodewa19.png",
+  "createdAt": {
+    "$date": "2023-04-13T04:18:35.643Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-13T04:18:35.643Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643784800078eb651120b094"
+  },
+  "name": "uploads/82133713-KonserDewa19.png",
+  "createdAt": {
+    "$date": "2023-04-13T04:26:40.023Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-13T04:26:40.023Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643787940078eb651120b117"
+  },
+  "name": "uploads/47591995-LogoNoah.png",
+  "createdAt": {
+    "$date": "2023-04-13T04:39:48.745Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-13T04:39:48.745Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643789690078eb651120b172"
+  },
+  "name": "uploads/85208062-Noah.png",
+  "createdAt": {
+    "$date": "2023-04-13T04:47:37.812Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-13T04:47:37.812Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64378a620078eb651120b1cc"
+  },
+  "name": "uploads/41947361-NoahJapan.png",
+  "createdAt": {
+    "$date": "2023-04-13T04:51:46.574Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-13T04:51:46.574Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645283488c9992944cc64ad1"
+  },
+  "name": "uploads/89330158-bb735e489bf0688b3bc72f31efe74218df0b7ad9.png",
+  "createdAt": {
+    "$date": "2023-05-03T15:52:40.088Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-03T15:52:40.088Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645283f68c9992944cc64aec"
+  },
+  "name": "uploads/84726749-0d0dcf9276dc09e4b3cb46a73c35549409e0edc7.png",
+  "createdAt": {
+    "$date": "2023-05-03T15:55:34.288Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-03T15:55:34.288Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645284f28c9992944cc64b4d"
+  },
+  "name": "uploads/38691608-9d0a1dda4c4f911af8a3bed82401fa52399ae2d7.png",
+  "createdAt": {
+    "$date": "2023-05-03T15:59:46.610Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-03T15:59:46.610Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6452859d8c9992944cc64b7b"
+  },
+  "name": "uploads/55077495-15fe20afd7246143b67c8944f98d268216da974b.png",
+  "createdAt": {
+    "$date": "2023-05-03T16:02:37.520Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-03T16:02:37.520Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645455f334f60de5560476f0"
+  },
+  "name": "uploads/26165629-7cd89d454f6fc56f042ee851e6fba2d3238064c9.png",
+  "createdAt": {
+    "$date": "2023-05-05T01:03:47.798Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-05T01:03:47.798Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6454561e34f60de556047702"
+  },
+  "name": "uploads/9953753-7cd89d454f6fc56f042ee851e6fba2d3238064c9.png",
+  "createdAt": {
+    "$date": "2023-05-05T01:04:30.183Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-05T01:04:30.183Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64547f38b3bb6804714a236c"
+  },
+  "name": "uploads/1054956-2e75b1ee525c4bd6aa2c3b1597922f51093d3c0b.png",
+  "createdAt": {
+    "$date": "2023-05-05T03:59:52.154Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-05T03:59:52.154Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64547f73b3bb6804714a237a"
+  },
+  "name": "uploads/17593102-e96d32cfb8d3fe2d85508859c0e90aab195ad92e.png",
+  "createdAt": {
+    "$date": "2023-05-05T04:00:51.660Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-05T04:00:51.660Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64547fcdb3bb6804714a23b7"
+  },
+  "name": "uploads/33434849-e96d32cfb8d3fe2d85508859c0e90aab195ad92e.png",
+  "createdAt": {
+    "$date": "2023-05-05T04:02:21.276Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-05T04:02:21.276Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6454c38773fcfee5ebe8ee7d"
+  },
+  "name": "uploads/80144206-e96d32cfb8d3fe2d85508859c0e90aab195ad92e.png",
+  "createdAt": {
+    "$date": "2023-05-05T08:51:19.563Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-05T08:51:19.563Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645517f043c94d9863356f2d"
+  },
+  "name": "uploads/32992731-e96d32cfb8d3fe2d85508859c0e90aab195ad92e.png",
+  "createdAt": {
+    "$date": "2023-05-05T14:51:28.768Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-05T14:51:28.768Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "646072552897f637db776f84"
+  },
+  "name": "uploads/50120950-0d0dcf9276dc09e4b3cb46a73c35549409e0edc7.png",
+  "createdAt": {
+    "$date": "2023-05-14T05:32:05.262Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T05:32:05.262Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6460785d2897f637db776fd4"
+  },
+  "name": "uploads/9359548-Cover.png",
+  "createdAt": {
+    "$date": "2023-05-14T05:57:49.468Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T05:57:49.468Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6460787f2897f637db77700d"
+  },
+  "name": "uploads/39938305-Cover.png",
+  "createdAt": {
+    "$date": "2023-05-14T05:58:23.692Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T05:58:23.692Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "646078892897f637db777034"
+  },
+  "name": "uploads/26198460-Cover.png",
+  "createdAt": {
+    "$date": "2023-05-14T05:58:33.660Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T05:58:33.660Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "646078952897f637db777062"
+  },
+  "name": "uploads/83208464-Cover.png",
+  "createdAt": {
+    "$date": "2023-05-14T05:58:45.542Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T05:58:45.542Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "646078a02897f637db777092"
+  },
+  "name": "uploads/16254159-Cover.png",
+  "createdAt": {
+    "$date": "2023-05-14T05:58:56.297Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T05:58:56.297Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "646078ac2897f637db7770c4"
+  },
+  "name": "uploads/39415092-Cover.png",
+  "createdAt": {
+    "$date": "2023-05-14T05:59:08.189Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T05:59:08.189Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "646078cb2897f637db77712f"
+  },
+  "name": "uploads/44317176-Cover.png",
+  "createdAt": {
+    "$date": "2023-05-14T05:59:39.998Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T05:59:39.998Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "646078f32897f637db77718c"
+  },
+  "name": "uploads/98641870-Cover.png",
+  "createdAt": {
+    "$date": "2023-05-14T06:00:19.372Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T06:00:19.372Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64607a072897f637db777212"
+  },
+  "name": "uploads/42030213-5945891 6.png",
+  "createdAt": {
+    "$date": "2023-05-14T06:04:55.447Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T06:04:55.447Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "646081002897f637db7773a3"
+  },
+  "name": "uploads/80604961-Cover Workshop.png",
+  "createdAt": {
+    "$date": "2023-05-14T06:34:40.704Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T06:34:40.704Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "646082702897f637db77747d"
+  },
+  "name": "uploads/32280754-Cover Workshop.png",
+  "createdAt": {
+    "$date": "2023-05-14T06:40:48.385Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-14T06:40:48.385Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6462ef922f716692a742977a"
+  },
+  "name": "uploads/13285749-5945891 6.png",
+  "createdAt": {
+    "$date": "2023-05-16T02:50:58.643Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-16T02:50:58.643Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6462f09d2f716692a742979c"
+  },
+  "name": "uploads/41385269-Cover Comedy.png",
+  "createdAt": {
+    "$date": "2023-05-16T02:55:25.924Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-16T02:55:25.924Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6462f1382f716692a742982b"
+  },
+  "name": "uploads/36615157-Cover Comedy.png",
+  "createdAt": {
+    "$date": "2023-05-16T02:58:00.508Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-16T02:58:00.508Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64632736c0ce2f04622630e9"
+  },
+  "name": "uploads/80531694-5945891 5.png",
+  "createdAt": {
+    "$date": "2023-05-16T06:48:22.884Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-16T06:48:22.884Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6463277dc0ce2f046226310d"
+  },
+  "name": "uploads/89328735-Cover Workshop.png",
+  "createdAt": {
+    "$date": "2023-05-16T06:49:33.143Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-16T06:49:33.143Z"
+  },
+  "__v": 0
 }]

@@ -1,0 +1,145 @@
+[{
+  "_id": {
+    "$oid": "63e436bb79ee73be7a687e92"
+  },
+  "firstName": "Asyam",
+  "lastName": "Daffa",
+  "email": "sasyam011@gmail.com",
+  "password": "$2a$12$vX7.AL3On3yZwSIvzVZpxerE6zIqCMUH/PDM1SAroQwItiBqHiLgW",
+  "role": "Developer",
+  "status": "aktif",
+  "otp": "4659",
+  "createdAt": {
+    "$date": "2023-02-08T23:56:43.738Z"
+  },
+  "updatedAt": {
+    "$date": "2023-02-08T23:57:26.001Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64522fc642da16c17b23e145"
+  },
+  "firstName": "Adi",
+  "lastName": "Wahyu",
+  "email": "aaadiwahyu@gmail.com",
+  "password": "$2a$12$g.AeeVDRZX2ItVVUnF6qmOpGzg/IFzWtWXUOl4FXG/uCdG7I7moH.",
+  "role": "User",
+  "status": "aktif",
+  "otp": "4841",
+  "createdAt": {
+    "$date": "2023-05-03T09:56:22.724Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-03T09:57:11.617Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6458950d0e2f483790032f7c"
+  },
+  "firstName": "Adi",
+  "lastName": "Putra",
+  "email": "adputraaa11@gmail.com",
+  "password": "$2a$12$lpM/BTKGgN.CypocEcxZzua11zEm7hDBDCYITmcxBG/1GV697SOD.",
+  "role": "User",
+  "status": "aktif",
+  "otp": "3173",
+  "createdAt": {
+    "$date": "2023-05-08T06:22:05.953Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-08T06:23:05.266Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6458a9e2377c634c7996f871"
+  },
+  "firstName": "ihsan",
+  "lastName": "cahyo Utomo",
+  "email": "ihsan.m.kom@gmail.com",
+  "password": "$2a$12$9ZcUtW2YoELKtkxrJLQsyuJxmSLLiYij1iuHM4Udfa15pvVTiXgM2",
+  "role": "User",
+  "status": "aktif",
+  "otp": "7666",
+  "createdAt": {
+    "$date": "2023-05-08T07:50:58.279Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-08T07:50:58.279Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "646240b4d5208d724ce1546e"
+  },
+  "firstName": "Andi",
+  "lastName": "Azis",
+  "email": "devtempmail1+xeblbwpfrv@gmail.com",
+  "password": "$2a$12$AYwTb0/3EyEs6MKJz.Tnl.yvXos49/HmLxBXLO0VnKE385G8cQUrC",
+  "role": "User",
+  "status": "tidak aktif",
+  "otp": "6357",
+  "createdAt": {
+    "$date": "2023-05-15T14:24:52.584Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-15T14:24:52.584Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64624152d5208d724ce15477"
+  },
+  "firstName": "User",
+  "lastName": "Daffa",
+  "email": "devtempmail1+ltvgcburgp@gmail.com",
+  "password": "$2a$12$JaL81VhG7QOI3qbhEuNQluuMemXlF5Qrb2hVc.27/BefBVokqUpR.",
+  "role": "User",
+  "status": "aktif",
+  "otp": "5489",
+  "createdAt": {
+    "$date": "2023-05-15T14:27:30.914Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-15T14:28:18.251Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6462dd23e6faf7868d20c5aa"
+  },
+  "firstName": "User",
+  "lastName": "Daffa",
+  "email": "devtempmail1+mnsbdqgtjt@gmail.com",
+  "password": "$2a$12$Qant2pHw8ChUQtEIqPA/T.mrmoNvn8/YAwQm5.lK07nVDdaRA/v6e",
+  "role": "User",
+  "status": "aktif",
+  "otp": "5709",
+  "createdAt": {
+    "$date": "2023-05-16T01:32:19.883Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-16T01:33:03.342Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "646325dec0ce2f0462262b2f"
+  },
+  "firstName": "User",
+  "lastName": "Daffa",
+  "email": "devtempmail1+snbtsfvybt@gmail.com",
+  "password": "$2a$12$Lr7i0XJfRNSg5TfFXAryYO85CCbvo5vEnYepyIav0xZ122eLfFqce",
+  "role": "User",
+  "status": "aktif",
+  "otp": "6762",
+  "createdAt": {
+    "$date": "2023-05-16T06:42:38.277Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-16T06:43:08.471Z"
+  },
+  "__v": 0
+}]
