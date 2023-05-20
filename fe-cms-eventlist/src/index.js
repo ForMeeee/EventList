@@ -8,6 +8,7 @@ import store from "./redux/store";
 import { Provider } from "react-redux";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
+import '@fortawesome/fontawesome-free/js/all.js';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

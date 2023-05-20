@@ -127,7 +127,16 @@ export default function EventsPage() {
                 <td>
                   <SButton
                     size="sm"
+                    variant="primary"
+                    className="mx-2"
+                    action={() => navigate(`/events/detail/${data._id}`)}
+                  >
+                    Detail
+                  </SButton>
+                  <SButton
+                    size="sm"
                     variant="success"
+                    className="mx-2"
                     action={() => navigate(`/events/edit/${data._id}`)}
                   >
                     Edit
