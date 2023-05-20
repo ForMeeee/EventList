@@ -32,10 +32,13 @@ const index = async (req, res, next) => {
 };
 const find = async (req, res, next) => {
   try {
-    const result = await getOneEvents(req);
+    const {result, totalTicket, sold, income} = await getOneEvents(req);
 
     res.status(StatusCodes.OK).json({
       data: result,
+      totalTicket: totalTicket,
+      sold: sold,
+      income: income,
     });
   } catch (err) {
     next(err);

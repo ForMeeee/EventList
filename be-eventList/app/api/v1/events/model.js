@@ -13,6 +13,10 @@ const ticketCategoriesSchema = new mongoose.Schema({
     type: Number,
     default: 0,
   },
+  sold: {
+    type: Number,
+    default: 0,
+  },
   statusTicketCategories: {
     type: Boolean,
     enum: [true, false],
@@ -77,6 +81,14 @@ const EventSchema = new mongoose.Schema(
       type: mongoose.Types.ObjectId,
       ref: "Organizer",
       required: true,
+    },
+    stock: {
+      type: Number,
+      default: 0,
+    },
+    sold: {
+      type: Number,
+      default: 0,
     },
   },
   { timestamps: true }

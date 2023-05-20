@@ -48,4 +48,23 @@ const invoiceMail = async (data) => {
   }
 }
 
-module.exports = { otpMail, invoiceMail };
+const receiptMail = async (data) => {
+  try {
+    let template = fs.readFileSync("app/views/email/receipt.html", "utf8");
+    const view = Mustache.render(template, data);
+    
+    let message = {
+      from: gmail,
+      to: data.personalDetail.email,
+      subject: "Receipt - Eventlist",
+      html: view,
+    };
+
+    console.log(view)
+    return await transporter.sendMail(message);
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+module.exports = { otpMail, invoiceMail, receiptMail };

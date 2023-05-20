@@ -10,38 +10,38 @@ const { createJWT, createTokenParticipant } = require("../../utils");
 const { otpMail, invoiceMail } = require("../mail");
 
 const getAllEvents = async (req) => {
-  const { category, priceFrom, priceTo, not } = req.query;
-  let filter = { statusEvent: "Published" };
+  const { category, priceFrom, priceTo, not } = req.query
+  let filter = { statusEvent: "Published" }
   if (category) {
     filter = {
       ...filter,
-      category: category,
-    };
+      category: category
+    }
   }
   if (priceFrom) {
     filter = {
       ...filter,
-      "tickets.price": {
-        $gte: priceFrom,
-      },
-    };
+      'tickets.price': {
+        $gte: priceFrom
+      }
+    }
   }
   if (priceTo) {
     filter = {
       ...filter,
-      "tickets.price": {
-        ...filter["tickets.price"],
-        $lte: priceTo,
-      },
-    };
+      'tickets.price': {
+        ...filter['tickets.price'],
+        $lte: priceTo
+      }
+    }
   }
   if (not) {
     filter = {
       ...filter,
       _id: {
-        $nin: not,
-      },
-    };
+        $nin: not
+      }
+    }
   }
   const query = await Events.find(filter)
     .populate("category")
@@ -64,7 +64,7 @@ const getOneEvent = async (req) => {
     //   });
 
     result = await Events.findOne({
-      _id: id,
+      _id: id
     })
       .populate({ path: "image", select: "_id name" })
       .populate({
@@ -76,8 +76,9 @@ const getOneEvent = async (req) => {
         select: "_id name role image",
         populate: { path: "image", select: "_id  name" },
       });
+
   } catch ($e) {
-    console.log("error", $e);
+    console.log('error', $e)
   }
 
   if (!result) throw new NotFoundError(`Tidak ada acara dengan id :  ${id}`);
@@ -109,12 +110,8 @@ const signinParticipant = async (req) => {
   }
 
   const token = createJWT({ payload: createTokenParticipant(result) });
-  return {
-    token: token,
-    user_id: result._id,
-    firstName: result.firstName,
-    lastNam: result.lastName,
-  };
+
+  return { token: token, user_id: result._id, firstName: result.firstName, lastNam: result.lastName };
 };
 
 const signupParticipant = async (req) => {
@@ -179,7 +176,9 @@ const activateParticipant = async (req) => {
 const getAllPaymentByOrganizer = async (req) => {
   const { organizer } = req.params;
 
-  const result = await Payments.find().populate("image");
+  const result = await Payments.find().populate(
+    "image"
+  );
 
   return result;
 };
@@ -250,8 +249,9 @@ const checkoutOrder = async (req) => {
   });
 
   await result.save().then(async (saved) => {
+
     //Coding send email
-    id = saved.id;
+    id = saved.id
     const data = await Orders.findOne({
       _id: id,
     })
@@ -259,11 +259,11 @@ const checkoutOrder = async (req) => {
       .populate({
         path: "event",
         populate: {
-          path: "image",
-        },
-      });
-    await invoiceMail(data);
-  });
+          path: "image"
+        }
+      })
+    await invoiceMail(data)
+  })
 
   return result;
 };

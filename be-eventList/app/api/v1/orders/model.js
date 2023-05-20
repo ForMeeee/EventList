@@ -21,6 +21,48 @@ const personalDetailSchema = new mongoose.Schema({
     type: String,
     default: "Designer",
   },
+  phone: {
+    type: String,
+    // required: [true, "Please provide phone number"],
+  }
+})
+
+
+const personalTicketSchema = new mongoose.Schema({
+  firstName: {
+    type: String,
+    required: [true, "Please provide firstName"],
+    minlength: 3,
+    maxlength: 50,
+  },
+  lastName: {
+    type: String,
+    required: [true, "Please provide lastName"],
+    minlength: 3,
+    maxlength: 50,
+  },
+  email: {
+    type: String,
+    required: [true, "Please provide email"],
+  },
+  role: {
+    type: String,
+    default: "Designer",
+  },
+  phone: {
+    type: String,
+    // required: [true, "Please provide phone number"],
+  },
+  qr_status: {
+    type: String,
+    default: 'not set'
+  },
+  qr_scan_time: {
+    type: String,
+  },
+  qr_string: {
+    type: String,
+  },
 })
 
 const orderDetailSchema = new mongoose.Schema({
@@ -38,7 +80,7 @@ const orderDetailSchema = new mongoose.Schema({
       default: 0,
     },
   },
-  userTickets: [personalDetailSchema],
+  userTickets: [personalTicketSchema],
   sumTicket: {
     type: Number,
     required: true,
@@ -54,8 +96,8 @@ const orderSchema = new mongoose.Schema(
     personalDetail: personalDetailSchema,
     status: {
       type: String,
-      enum: ["paid"],
-      default: "paid",
+      enum: ["pending", "paid"],
+      default: "pending",
     },
     totalPay: {
       type: Number,
