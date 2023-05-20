@@ -22,12 +22,9 @@ export default function DetailPage({ detailPage, id }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await getData("api/v1/events", {
-          category: detailPage.category._id,
-          not: detailPage._id,
-        });
+        const res = await getData("api/v1/events", {category: detailPage.category._id, not: detailPage._id});
         setData(res.data);
-      } catch (err) {}
+      } catch (err) { }
     };
 
     fetchData();
@@ -40,7 +37,8 @@ export default function DetailPage({ detailPage, id }) {
 
     return () => {
       newList = [];
-    };
+    }
+
   }, []);
 
   const router = useRouter();
@@ -60,14 +58,16 @@ export default function DetailPage({ detailPage, id }) {
             order: val.order,
           });
         }
-      });
+      })
 
       let data = {
         organizer: detailPage.organizer,
         dataOrder: orderData,
-      };
+      }
       let dataString = JSON.stringify(data);
-      router.push(`/checkout/${id}?orderdata=${btoa(dataString)}`);
+      router.push(
+        `/checkout/${id}?orderdata=${btoa(dataString)}`
+      );
     }
   };
 
@@ -78,16 +78,16 @@ export default function DetailPage({ detailPage, id }) {
       total += val.order * val.price;
     }
     setTotalOrder(total);
-  };
+  }
 
   const handleAmountOrder = async (idx, add) => {
     let newCart = [...ticketList];
     let newTicket = newCart[idx];
 
     if (add === 1) {
-      newTicket.order = newTicket.order * 1 + 1;
+      newTicket.order = (newTicket.order * 1) + 1;
     } else {
-      newTicket.order = newTicket.order * 1 - 1;
+      newTicket.order = (newTicket.order * 1) - 1;
     }
 
     if (newTicket.order > 5) {
@@ -99,14 +99,14 @@ export default function DetailPage({ detailPage, id }) {
     newCart[idx] = newTicket;
     setTicketList(newCart);
     CalcuTotalOrder();
-  };
+  }
 
   const handleChangeOrder = (idx) => (e) => {
     let { name, value } = e.target;
     let newCart = [...ticketList];
     let newTicket = newCart[idx];
 
-    newTicket.order = value;
+    newTicket.order = value
 
     if (newTicket.order > 5) {
       newTicket.order = 5;
@@ -117,7 +117,7 @@ export default function DetailPage({ detailPage, id }) {
     newCart[idx] = newTicket;
     setTicketList(newCart);
     CalcuTotalOrder();
-  };
+  }
 
   return (
     <>
@@ -134,9 +134,9 @@ export default function DetailPage({ detailPage, id }) {
       <div className="preview-image bg-navy text-center">
         <img
           src={
-            detailPage.image?.name
-              ? process.env.NEXT_PUBLIC_API_IMAGE + "/" + detailPage.image.name
-              : "/images/details-image.png"
+            detailPage.image?.name ?
+              process.env.NEXT_PUBLIC_API_IMAGE + '/' + detailPage.image.name
+              : '/images/details-image.png'
           }
           className="img-content"
           alt="EventList"
@@ -154,8 +154,7 @@ export default function DetailPage({ detailPage, id }) {
               </div>
               <div className="d-flex align-items-center text-light">
                 <img src="/icons/ic-time.svg" alt="EventList" />{" "}
-                {formatDate(detailPage.date)}{" "}
-                {moment(detailPage.date).format("HH.MM A")}
+                {formatDate(detailPage.date)} {moment(detailPage.date).format("HH.MM A")}
               </div>
               <br />
               <div className="event-details">
@@ -192,9 +191,9 @@ export default function DetailPage({ detailPage, id }) {
               <div className="my-3">
                 <h6>Your Speaker</h6>
                 <Row>
-                  {detailPage.talent.map((val, key) => {
-                    return (
-                      <Col xs="12" lg="6">
+                  {
+                    detailPage.talent.map((val, key) => {
+                      return <Col xs="12" lg="6">
                         <div className="d-flex align-items-center border p-2 mb-3">
                           <div className="me-3">
                             <img
@@ -209,10 +208,13 @@ export default function DetailPage({ detailPage, id }) {
                           </div>
                         </div>
                       </Col>
-                    );
-                  })}
+                    })
+                  }
                 </Row>
-                <div className="d-flex align-items-center gap-3 mt-3"></div>
+                <div className="d-flex align-items-center gap-3 mt-3">
+
+
+                </div>
               </div>
             </div>
           </div>
@@ -224,71 +226,37 @@ export default function DetailPage({ detailPage, id }) {
                   <>
                     {ticket.statusTicketCategories ? (
                       <div key={ticket._id} className="card border m-2">
-                        <div
-                          className={
-                            `card-body border-start border-5 rounded-2 ` +
-                            (ticket.stock !== 0
-                              ? `border-success`
-                              : `border-danger`)
-                          }
-                        >
+                        <div className={`card-body border-start border-5 rounded-2 ` + (ticket.stock !== 0 ? `border-success` : `border-danger`)}>
                           <div className="d-flex flex-row flex-wrap align-items-center">
                             <div className="flex-grow-1">
                               <p className="type">{ticket.type}</p>
                               <div className="price">
-                                {ticket.price === 0 ? (
-                                  "free"
-                                ) : (
-                                  <>
-                                    Rp
-                                    <FormatMoney amount={ticket.price} />
-                                  </>
-                                )}
+                                {ticket.price === 0 ? "free" : <>Rp<FormatMoney amount={ticket.price} /></>}
                                 <span>/person</span>
                               </div>
+                              <div className="price"><span><small>Avb Stock: {ticket.stock}</small></span></div>
                             </div>
-                            <div className="" style={{ maxWidth: "120px" }}>
-                              {ticket.stock > 0 && (
-                                <>
-                                  {ticket.order > 0 ? (
-                                    <>
-                                      <InputGroup>
-                                        <Button
-                                          variant="secondary"
-                                          onClick={() =>
-                                            handleAmountOrder(key, -1)
-                                          }
-                                        >
-                                          -
-                                        </Button>
-                                        <Form.Control
-                                          name="orderamount"
-                                          value={ticket.order}
-                                          onChange={handleChangeOrder(key)}
-                                        />
-                                        <Button
-                                          variant="secondary"
-                                          onClick={() =>
-                                            handleAmountOrder(key, +1)
-                                          }
-                                        >
-                                          +
-                                        </Button>
-                                      </InputGroup>
-                                    </>
-                                  ) : (
-                                    <Button
-                                      variant="success"
-                                      onClick={() => handleAmountOrder(key, +1)}
-                                    >
-                                      Add
-                                    </Button>
-                                  )}
+                            <div className="" style={{ maxWidth: '120px' }}>
+
+                              {
+                                ticket.stock > 0 && <>
+                                  {
+                                    ticket.order > 0
+                                      ? <>
+                                        <InputGroup>
+                                          <Button variant="secondary" onClick={() => handleAmountOrder(key, -1)}>-</Button>
+                                          <Form.Control name="orderamount" value={ticket.order} onChange={handleChangeOrder(key)} />
+                                          <Button variant="secondary" onClick={() => handleAmountOrder(key, +1)}>+</Button>
+                                        </InputGroup>
+                                      </>
+                                      : <Button variant="success" onClick={() => handleAmountOrder(key, +1)}>Add</Button>
+                                  }
                                 </>
-                              )}
-                              {ticket.stock <= 0 && (
-                                <Button variant="secondary">Sold Out</Button>
-                              )}
+                              }
+                              {
+                                ticket.stock <= 0 && <Button variant="secondary">Sold Out</Button>
+                              }
+
                             </div>
                           </div>
                         </div>
@@ -302,15 +270,10 @@ export default function DetailPage({ detailPage, id }) {
               <div className="d-flex align-items-center px-4 py-3">
                 <div>
                   <p className="h5">Subtotal</p>
-                  <p className="h4 text-warning">
-                    Rp
-                    <FormatMoney amount={totalOrder} />
-                  </p>
+                  <p className="h4 text-warning">Rp<FormatMoney amount={totalOrder} /></p>
                 </div>
                 <div className="ms-auto me-0">
-                  <Button onClick={handleSubmit} disabled={totalOrder <= 0}>
-                    Checkout
-                  </Button>
+                  <Button onClick={handleSubmit} disabled={totalOrder <= 0}>Checkout</Button>
                 </div>
               </div>
             </div>

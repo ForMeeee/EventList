@@ -28,7 +28,7 @@ export default function FormCheckout({ tickets, orderData, event, participant })
           lastName: '',
           firstName: '',
           email: '',
-          role: ''
+          phone: ''
         }
 
         for (let i = 0; i < val.order; i++) {
@@ -51,7 +51,7 @@ export default function FormCheckout({ tickets, orderData, event, participant })
     email: "",
     lastName: "",
     firstName: "",
-    role: "",
+    phone: "",
     payment: "",
     event: router.query.id,
   });
@@ -133,7 +133,7 @@ export default function FormCheckout({ tickets, orderData, event, participant })
                 lastName: val.lastName,
                 firstName: val.firstName,
                 email: val.email,
-                role: val.role,
+                phone: val.phone,
               });
           }
         })
@@ -146,7 +146,7 @@ export default function FormCheckout({ tickets, orderData, event, participant })
           lastName: form.lastName,
           firstName: form.firstName,
           email: form.email,
-          role: form.role,
+          phone: form.phone,
         },
         participant: participant,
         tickets: tickets,
@@ -280,15 +280,15 @@ export default function FormCheckout({ tickets, orderData, event, participant })
 
           <div className="mb-4 col-lg-4">
             <label htmlFor="exampleFormControlInput1" className="form-label">
-              Role
+              Phone
             </label>
             <input
-              type="text"
+              type="number"
               className="form-control"
-              id="role"
-              placeholder="Product Designer"
-              name="role"
-              value={form.role}
+              id="phone"
+              placeholder="Phone Number"
+              name="phone"
+              value={form.phone}
               onChange={handleChange}
             />
           </div>
@@ -364,15 +364,15 @@ export default function FormCheckout({ tickets, orderData, event, participant })
                     htmlFor="exampleFormControlInput1"
                     className="form-label"
                   >
-                    Role
+                    Phone
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     className="form-control"
-                    id="role"
-                    placeholder="Product Designer"
-                    name="role"
-                    value={val.role}
+                    id="phone"
+                    placeholder="Phone number"
+                    name="phone"
+                    value={val.phone}
                     onChange={handleChangeOrder(key)}
                   />
                 </div>
@@ -414,7 +414,7 @@ export default function FormCheckout({ tickets, orderData, event, participant })
           ))}
         </div>
       </div>
-      <div className="payment-detail mt-4">
+      <div>
         <div className="row row-cols-lg-8 row-cols-md-2 row-cols-1 justify-content-lg-center">
           <div className="form-title col-lg-8">
             <span>04</span>

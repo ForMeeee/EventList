@@ -11,11 +11,11 @@ export default function FormSignin() {
   const { keyword } = router.query;
   const [otp, setOtp] = useState('');
   const [form, setForm] = useState({
-    email: '',
-    password: '',
-    firstName: '',
-    lastName: '',
-    role: '',
+    email: "",
+    password: "",
+    firstName: "",
+    lastName: "",
+    phone: "",
   });
 
   const handleChange = (e) => {
@@ -60,14 +60,14 @@ export default function FormSignin() {
   };
 
   return (
-    <form className='form-login d-flex flex-column mt-4 mt-md-0'>
-      {keyword === 'otp' ? (
+    <form className="form-login d-flex flex-column mt-4 mt-md-0">
+      {keyword === "otp" ? (
         <TextInput
-          label={'otp'}
-          type={'text'}
+          label={"otp"}
+          type={"text"}
           value={otp}
-          name='otp'
-          placeholder='Enter opt here'
+          name="otp"
+          placeholder="Enter opt here"
           onChange={(e) => {
             setOtp(e.target.value);
           }}
@@ -75,54 +75,54 @@ export default function FormSignin() {
       ) : (
         <>
           <TextInput
-            label={'First Name'}
-            type={'text'}
+            label={"First Name"}
+            type={"text"}
             value={form.firstName}
-            name='firstName'
-            placeholder='First name here'
+            name="firstName"
+            placeholder="First name here"
             onChange={handleChange}
           />
           <TextInput
-            label={'Last Name'}
-            type={'text'}
-            name='lastName'
+            label={"Last Name"}
+            type={"text"}
+            name="lastName"
             value={form.lastName}
-            placeholder='First name here'
+            placeholder="First name here"
             onChange={handleChange}
           />
 
           <TextInput
-            label={'Email'}
-            type={'email'}
-            name='email'
+            label={"Email"}
+            type={"email"}
+            name="email"
             value={form.email}
-            placeholder={'EventList@gmail.com'}
+            placeholder={"EventList@gmail.com"}
             onChange={handleChange}
           />
 
           <TextInput
-            label={'Password (6 characters)'}
-            type={'password'}
+            label={"Password (6 characters)"}
+            type={"password"}
             value={form.password}
-            name='password'
-            placeholder='Type your password'
+            name="password"
+            placeholder="Type your password"
             onChange={handleChange}
           />
 
           <TextInput
-            label={'Role'}
-            type={'text'}
-            value={form.role}
-            name='role'
-            placeholder='ex: Product Designer'
+            label={"phone"}
+            type={"number"}
+            value={form.phone}
+            name="phone"
+            placeholder="Phone number"
             onChange={handleChange}
           />
         </>
       )}
 
-      <div className='d-grid mt-2'>
-        <Button variant={'btn-green'} action={() => handleSubmit()}>
-          {keyword === 'code' ? 'Verification' : 'Sign Up'}
+      <div className="d-grid mt-2">
+        <Button variant={"btn-green"} action={() => handleSubmit()}>
+          {keyword === "code" ? "Verification" : "Sign Up"}
         </Button>
       </div>
     </form>
